@@ -153,7 +153,6 @@
                 
                 <input type="date" class="datepicker" name="Birthday" />  
                 
-                
             </div>
          </div>
             
@@ -170,14 +169,78 @@
 <!--            Beginning of Transaction Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">receipt</i>Transaction</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+          <div class="collapsible-body">
+            
+           <div class="row">
+            <form class="col s12">
+              <div class="row">
+
+                  <div class="input-field col s4">
+                  <input id="transactionID" type="text" class="validate">
+                  <label for="transactionID">Transaction ID</label>
+                </div>
+                  <div class="input-field col s4">
+                  <input id="subtotal" type="text" class="validate">
+                  <label for="subtotal">Sub_Total</label>
+                </div>
+                  
+                  
+                  <div class="input-field col s4">
+                      
+
+                    <input type="date" class="datepicker" name="Birthday" />  
+                        
+                </div>
+
+              </div>
+        </form>
+      </div>  
+    </div>
+</li>
 <!--        End of Transaction Entity-->
         
 <!--            Beginning of Items Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">list</i>Items</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-body">
+            
+            <div class="row">
+            <form class="col s12">
+              <div class="row">
+
+                  <div class="input-field col s4">
+                  <input id="itemID" type="text" class="validate">
+                  <label for="itemID">Item ID</label>
+                </div>
+                  <div class="input-field col s4">
+                  <input id="weight" type="text" class="validate">
+                  <label for="weight">Weight</label>
+                </div>
+                  
+                  <div class="input-field col s4">
+                  <input id="brand" type="text" class="validate">
+                  <label for="brand">Brand</label>
+                </div>
+                  <div class="input-field col s4">
+                  <input id="price" type="text" class="validate">
+                  <label for="price">Price</label>
+                </div>
+                  <div class="input-field col s4">
+                  <input id="name" type="text" class="validate">
+                  <label for="name">Name</label>
+                </div>
+                  
+                  
+            
+
+                      </div>
+                </form>
+              </div>  
+
+            
+            
+            
+          </div>
         </li>
 <!--        End of Items Entity-->
         
@@ -187,6 +250,18 @@
           <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
 <!--        End of Promotion Entity-->
+  
+        
+        <!--            Beginning of Promotion Entity-->
+        <li>
+          <div class="collapsible-header"><i class="material-icons">store</i>Stores</div>
+          <div class="collapsible-body">
+            
+            
+            
+          </div>
+        </li>
+        <!--        End of Promotion Entity-->
   
 
      
