@@ -247,7 +247,37 @@
 <!--            Beginning of Promotion Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">loyalty</i>Promotion</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-body">
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+
+                      <div class="input-field col s6">
+                      <input id="promoID" type="text" class="validate">
+                      <label for="promoID">Promotion ID</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="rebate" type="text" class="validate">
+                      <label for="rebate">rebate</label>
+                    </div>
+                      
+                    <div class="input-field col s6">
+                        <input type="date" class="datepicker">  
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="date" class="datepicker">  
+                    </div>
+                      
+                      
+                  </div>
+                </form>
+              </div> 
+                
+            
+            
+            
+            
+          </div>
         </li>
 <!--        End of Promotion Entity-->
   
