@@ -72,13 +72,19 @@
                 <label>Gender</label>
             </div>
               
-            <div class="input-field col s2">
-                Birthday 
+            
+         </div>
+         <div class="row">
+            <div class="input-field col s6">
+                <p style="margin-right: 50px;">Birthday:</p> 
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s6">
                 <input type="date" class="datepicker">  
             </div>
-         </div>
+            
+            
+            
+        </div>
 <!--            This section is for member/non-member-->
             <div class="row">
                 <div class="input-field col s6">
