@@ -71,6 +71,10 @@
                 </select>
                 <label>Gender</label>
             </div>
+              
+            <div class="input-field col s2">
+                Birthday 
+            </div>
             <div class="input-field col s4">
                 <input type="date" class="datepicker">  
             </div>
@@ -123,7 +127,7 @@
       <div class="collapsible-body">
           
        <div class="row">
-        <form class="col s12">
+        <form class="col s12" action="#">
           <div class="row">
               
               <div class="input-field col s3">
@@ -149,10 +153,14 @@
                 <label>Gender</label>
             </div>
             
+            <div class="input-field col s2">
+                &nbsp; Birthday:  
+                        
+            </div>
             <div class="input-field col s4">
                 
-                <input type="date" class="datepicker" name="Birthday" />  
-                
+                <input id="birthDay" type="date"  class="datepicker" /> 
+<!--                <label for="birthDay"> Birthday</label>-->
             </div>
          </div>
             
@@ -185,9 +193,7 @@
                 </div>
                   
                   
-                  <div class="input-field col s4">
-                      
-
+                <div class="input-field col s4">
                     <input type="date" class="datepicker" name="Birthday" />  
                         
                 </div>
@@ -258,40 +264,84 @@
                     </div>
                       <div class="input-field col s6">
                       <input id="rebate" type="text" class="validate">
-                      <label for="rebate">rebate</label>
+                      <label for="rebate">Rebate</label>
                     </div>
-                      
-                    <div class="input-field col s6">
-                        <input type="date" class="datepicker">  
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="date" class="datepicker">  
-                    </div>
-                      
-                      
+                   
                   </div>
+                    <div class="row">
+
+                    <div class="input-field col s4">
+                     Beginning   
+                        <input type="date" class="datepicker">  
+                    </div>
+                    <div class="input-field col s4">
+                     End Date
+                        <input type="date" class="datepicker">  
+                    </div>
+                    </div>
                 </form>
               </div> 
-                
-            
-            
-            
-            
           </div>
         </li>
 <!--        End of Promotion Entity-->
   
         
-        <!--            Beginning of Promotion Entity-->
+        <!--            Beginning of Stores Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">store</i>Stores</div>
           <div class="collapsible-body">
-            
-            
-            
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+
+                      <div class="input-field col s6">
+                      <input id="storeID" type="text" class="validate">
+                      <label for="storeID">Store ID</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="storeName" type="text" class="validate">
+                      <label for="storeName">Store Name</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="address" type="text" class="validate">
+                      <label for="address">Address</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="numEmployees" type="text" class="validate">
+                      <label for="numEmployees">Number of Employees</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="mgrFirst" type="text" class="validate">
+                      <label for="mgrFirst">Manager First Name</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="mgrLast" type="text" class="validate">
+                      <label for="mgrLast">Manager Last Name</label>
+                    </div>
+                      <div class="input-field col s6">
+                      <input id="supName" type="text" class="validate">
+                      <label for="supName">Supervisor Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select>
+                          <option value="" disabled selected>Retail/WholeSale</option>
+                          <option value="Retail">Retail</option>
+                          <option value="WholeSale">WholeSale</option>
+                          
+                        </select>
+                        <label>Type of Store</label>
+                    </div>
+                      
+                    
+                      
+                      
+                  </div>
+                    
+                </form>
+              </div>
           </div>
         </li>
-        <!--        End of Promotion Entity-->
+        <!--        End of Store Entity-->
   
 
      
@@ -299,7 +349,6 @@
      </ul>
 </div>
 <!-- end of collapsible===================-->
-        
         
         
         
