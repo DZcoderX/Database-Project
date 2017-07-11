@@ -154,8 +154,7 @@
             </div>
             
             <div class="input-field col s2">
-                &nbsp; Birthday:  
-                        
+                <p>&nbsp; Bday: </p>           
             </div>
             <div class="input-field col s4">
                 
@@ -183,15 +182,18 @@
             <form class="col s12">
               <div class="row">
 
-                  <div class="input-field col s4">
+                <div class="input-field col s3">
                   <input id="transactionID" type="text" class="validate">
                   <label for="transactionID">Transaction ID</label>
                 </div>
-                  <div class="input-field col s4">
+                <div class="input-field col s3">
                   <input id="subtotal" type="text" class="validate">
                   <label for="subtotal">Sub_Total</label>
                 </div>
                   
+                <div class="input-field col s2">
+                  <p>&nbsp; Date: </p>
+                </div>
                   
                 <div class="input-field col s4">
                     <input type="date" class="datepicker" name="Birthday" />  
