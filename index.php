@@ -60,22 +60,22 @@
         <div class="space"></div>
           <div class="col s12 m6 l3">
               
-                <a class="waves-effect waves-light btn-large orange" href="add.php"><i class="material-icons right">add</i>
+                <a class="waves-effect waves-light btn-large orange" href="./add/add.php"><i class="material-icons right">add</i>
                     Add
                   </a>
          </div>
           <div class="col s12 m6 l3">
               
-                <a class="waves-effect waves-light btn-large orange" href="edit.php"><i class="material-icons right">edit</i>Edit</a>
+                <a class="waves-effect waves-light btn-large orange" href="./edit/edit.php"><i class="material-icons right">edit</i>Edit</a>
                  
          </div>
          <div class="col s12 m6 l3">
                  
-                <a class="waves-effect waves-light btn-large orange" href="delete.php"><i class="material-icons right">delete</i>Delete</a>
+                <a class="waves-effect waves-light btn-large orange" href="./delete/delete.php"><i class="material-icons right">delete</i>Delete</a>
          </div>
          <div class="col s12 m6 l3">
                  
-                  <a class="waves-effect waves-light btn-large orange" href="view.php"><i class="material-icons right">visibility</i>Look</a>
+                  <a class="waves-effect waves-light btn-large orange" href="./view/view.php"><i class="material-icons right">visibility</i>Look</a>
           </div>
           </div>
           <div class="space"></div>

@@ -4,18 +4,59 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
-        <link href="css/stylesAdd.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/stylesAdd.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         
     </head>
 
     <body>
         
-        
+        <?php
+         if(isset($_POST['addCust'])) {
+            $dbhost = 'localhost:8888';
+            $dbuser = 'root';
+            $dbpass = 'rootpassword';
+            $dbname = 'Database_test';
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
+            
+            if(! $conn ) {
+               die('Could not connect: ' . mysql_error());
+            }
+            
+            if(! get_magic_quotes_gpc() ) {
+               $customer_ID = addslashes ($_POST['customer_ID']);
+               $first_Name = addslashes ($_POST['first_Name']);
+               $last_name = addslashes ($_POST['last_name']);
+               $email = addslashes ($_POST['email']);
+               $credit_Score = addslashes ($_POST['credit_Score']);
+            }else {
+               $customer_ID = addslashes ($_POST['customer_ID']);
+               $first_Name = addslashes ($_POST['first_Name']);
+               $last_name = addslashes ($_POST['last_name']);
+               $email = addslashes ($_POST['email']);
+               $credit_Score = addslashes ($_POST['credit_Score']);
+            }
+            
+            
+            
+            $sql = "INSERT INTO Customers ". "(CustomerID,F_Name, L_Name,Email,Gender,B_Day,Credit_Rating) ". "VALUES('$customer_ID','$first_Name',$last_name,$email,$credit_Score NOW())";
+               
+            mysql_select_db('test_db');
+            $retval = mysql_query( $sql, $conn );
+            
+            if(! $retval ) {
+               die('Could not enter data: ' . mysql_error());
+            }
+            
+            echo "Entered data successfully\n";
+            
+            mysql_close($conn);
+         }else {
+            ?>
 <!--        Collapsible -->
         
  <div id="collapseAdd">
@@ -24,27 +65,32 @@
           <div class="collapsible-header"><i class="material-icons">perm_identity</i>Customer</div>
           <div class="collapsible-body">
 <!--Customer Entity-->
+
+              <!--  Database connection-->
+              
+              
+              
+              
+              
+                <!--    End of Database Connection          -->
      <div class="row">
-        <form class="col s12">
+        <form class="col s12" method = "post" action = "<?php $_PHP_SELF ?>">
           <div class="row">
               
-            <div class="input-field col s3">
+            <div class="input-field col s4">
               <input id="customer_ID" type="text" class="validate">
-<!--                need to make this only accept numbers or can it be both numbers and letters?-->
+
               <label for="customer_ID">Customer ID</label>
             </div>  
-              <div class="input-field col s3">
+              <div class="input-field col s4">
               <input id="first_Name" type="text" class="validate">
               <label for="first_Name">First Name</label>
             </div>
-              <div class="input-field col s3">
+              <div class="input-field col s4">
               <input id="last_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
-            <div class="input-field col s3">
-              <input id="credit_Score" type="text" class="validate">
-              <label for="credit_Score">Credit Score</label>
-            </div>
+            
           </div>
           <div class="row">
             <div class="input-field col s6">
@@ -57,12 +103,12 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s6">
 <!--              <i class="material-icons prefix">phone</i>-->
               <input id="icon_telephone" type="tel" class="validate">
               <label for="icon_telephone">Telephone</label>
             </div>
-            <div class="input-field col s4">
+            <div class="input-field col s6">
                 <select>
                   <option value="" disabled selected>Select your Gender</option>
                   <option value="1">Male</option>
@@ -75,33 +121,37 @@
             
          </div>
          <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s2">
                 <p style="margin-right: 50px;">Birthday:</p> 
             </div>
             <div class="input-field col s6">
                 <input type="date" class="datepicker">  
             </div>
-            
+            <div class="input-field col s4">
+              <input id="credit_Score" type="text" class="validate">
+              <label for="credit_Score">Credit Score</label>
+            </div>
             
             
         </div>
 <!--            This section is for member/non-member-->
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s4">
                     <select onChange="changetextbox();" id="MemIDS" name="MemIDS">
                       <option value="" disabled selected>(Non)Member</option>
                       <option value="1">Member</option>
                       <option value="2">Non Member</option>
                     </select>
-                    <label>Gender</label> 
+                    <label>(Non)Member</label> 
                 
                     
             </div>
-                <div class="input-field col s6">
+                <div class="input-field col s4">
                   
                   <input type="text" class="validate"  id="MemID" name="MemID"  />
                   <label for="Members">Member ID</label>
                 </div>
+                    <!--
             <script type="text/javascript">
                 function changetextbox()
                 {
@@ -112,9 +162,15 @@
                     }
                 }
             </script>
-                
+                        -->
+                <div class="input-field col s2">
+                    <p><br></p>&nbsp;
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             </div>
-<!--            ===============end of member/nonmember-->
+                <!-- ===============end of member/nonmember-->
           
         
             
@@ -136,11 +192,11 @@
         <form class="col s12" action="#">
           <div class="row">
               
-              <div class="input-field col s3">
+              <div class="input-field col s6">
               <input id="first_Name" type="text" class="validate">
               <label for="first_Name">First Name</label>
             </div>
-              <div class="input-field col s3">
+              <div class="input-field col s6">
               <input id="last_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
@@ -160,12 +216,10 @@
             </div>
             
             <div class="input-field col s2">
-                <p>&nbsp; Bday: </p>           
+                <p style="margin-right: 50px;">Birthday:</p> 
             </div>
-            <div class="input-field col s4">
-                
-                <input id="birthDay" type="date"  class="datepicker" /> 
-<!--                <label for="birthDay"> Birthday</label>-->
+            <div class="input-field col s6">
+                <input type="date" class="datepicker">  
             </div>
          </div>
             
@@ -197,8 +251,8 @@
                   <label for="subtotal">Sub_Total</label>
                 </div>
                   
-                <div class="input-field col s2">
-                  <p>&nbsp; Date: </p>
+                <div class="input-field col s1">
+                  <p>Date: </p>
                 </div>
                   
                 <div class="input-field col s4">
@@ -279,7 +333,7 @@
                     <div class="row">
 
                     <div class="input-field col s4">
-                     Beginning   
+                     Beginning Date
                         <input type="date" class="datepicker">  
                     </div>
                     <div class="input-field col s4">
@@ -371,7 +425,7 @@
         
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
         <script type="text/javascript">
     $(document).ready(function() {
       $('select').material_select();
