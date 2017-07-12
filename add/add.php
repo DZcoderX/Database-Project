@@ -124,7 +124,7 @@ include ('./my_connect.php');
         </div>
 <!--            This section is for member/non-member-->
             <div class="row">
-                <div class="input-field col s4">
+                <div class="input-field col s6">
                     <select onChange="changetextbox();" id="MemIDS" name="MemIDS">
                       <option value="" disabled selected>(Non)Member</option>
                       <option value="1">Member</option>
@@ -134,7 +134,7 @@ include ('./my_connect.php');
                 
                     
             </div>
-                <div class="input-field col s4">
+                <div class="input-field col s6">
                   
                   <input type="text" class="validate"  id="MemID" name="MemID"  />
                   <label for="Members">Member ID</label>
@@ -151,16 +151,16 @@ include ('./my_connect.php');
                 }
             </script>
                         -->
-                <div class="input-field col s2">
-                    <p><br></p>&nbsp;
-                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                    </button>
-                </div>
+                
             </div>
                 <!-- ===============end of member/nonmember-->
           
-        
+            <div class="input-field col s2">
+                
+                <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
 		
             
           
@@ -212,7 +212,12 @@ include ('./my_connect.php');
             </div>
          </div>
             
-          
+          <div class="input-field col s2">
+<!--                    <p><br></p>&nbsp;-->
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
             
         </form>
       </div>
@@ -250,6 +255,13 @@ include ('./my_connect.php');
                 </div>
 
               </div>
+                
+                <div class="input-field col s2">
+<!--                    <p><br></p>&nbsp;-->
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
         </form>
       </div>  
     </div>
@@ -291,6 +303,13 @@ include ('./my_connect.php');
             
 
                       </div>
+
+                <div class="input-field col s2">
+<!--                    <p><br></p>&nbsp;-->
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
                 </form>
               </div>  
 
@@ -330,6 +349,13 @@ include ('./my_connect.php');
                         <input type="date" class="datepicker">  
                     </div>
                     </div>
+                    
+                    <div class="input-field col s2">
+<!--                    <p><br></p>&nbsp;-->
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
                 </form>
               </div> 
           </div>
@@ -387,6 +413,13 @@ include ('./my_connect.php');
                       
                       
                   </div>
+                    
+                    <div class="input-field col s2">
+<!--                    <p><br></p>&nbsp;-->
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
                     
                 </form>
               </div>
