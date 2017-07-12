@@ -1,3 +1,8 @@
+<php 
+include ('./my_connect.php');
+
+?>
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -14,49 +19,33 @@
     </head>
 
     <body>
-        
         <?php
-         if(isset($_POST['addCust'])) {
-            $dbhost = 'localhost:8888';
-            $dbuser = 'root';
-            $dbpass = 'rootpassword';
-            $dbname = 'Database_test';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
-            
-            if(! $conn ) {
-               die('Could not connect: ' . mysql_error());
-            }
-            
-            if(! get_magic_quotes_gpc() ) {
-               $customer_ID = addslashes ($_POST['customer_ID']);
-               $first_Name = addslashes ($_POST['first_Name']);
-               $last_name = addslashes ($_POST['last_name']);
-               $email = addslashes ($_POST['email']);
-               $credit_Score = addslashes ($_POST['credit_Score']);
-            }else {
-               $customer_ID = addslashes ($_POST['customer_ID']);
-               $first_Name = addslashes ($_POST['first_Name']);
-               $last_name = addslashes ($_POST['last_name']);
-               $email = addslashes ($_POST['email']);
-               $credit_Score = addslashes ($_POST['credit_Score']);
-            }
-            
-            
-            
-            $sql = "INSERT INTO Customers ". "(CustomerID,F_Name, L_Name,Email,Gender,B_Day,Credit_Rating) ". "VALUES('$customer_ID','$first_Name',$last_name,$email,$credit_Score NOW())";
-               
-            mysql_select_db('test_db');
-            $retval = mysql_query( $sql, $conn );
-            
-            if(! $retval ) {
-               die('Could not enter data: ' . mysql_error());
-            }
-            
-            echo "Entered data successfully\n";
-            
-            mysql_close($conn);
-         }else {
-            ?>
+					// Enable error logging: 
+						error_reporting(E_ALL ^ E_NOTICE);
+						// mysqli connection via user-defined function
+						include ('./my_connect.php');
+						$mysqli = get_mysqli_conn();
+						
+						
+				  if(isset($_POST['addCust'])){
+					  echo "<script type='text/javascript'>alert('help');</script>";
+					$customer_ID = addslashes ($_POST['customer_ID']);
+					   $first_Name = addslashes ($_POST['first_Name']);
+					   $last_name = addslashes ($_POST['last_name']);
+					   $email = addslashes ($_POST['email']);
+					   $credit_Score = addslashes ($_POST['credit_Score']);
+					
+					$sql = "INSERT INTO Customers ". "(Customer_Id,F_Name, L_Name,email,gender,B_Day,Credit_Rating) ". "VALUES('$customer_ID','$first_Name',$last_name,$email,$credit_Score NOW())";
+					$stmt = mysqli_prepare($sql);
+					$stmt->bind_param("isssi", $customer_ID, $first_Name, $last_name, $email, $credit_Score);
+					$stmt->execute();
+					$stmt->close(); 
+					$mysqli->close();
+					}else {
+				}
+
+				?>
+        
 <!--        Collapsible -->
         
  <div id="collapseAdd">
@@ -67,14 +56,13 @@
 <!--Customer Entity-->
 
               <!--  Database connection-->
-              
-              
+             
               
               
               
                 <!--    End of Database Connection          -->
      <div class="row">
-        <form class="col s12" method = "post" action = "<?php $_PHP_SELF ?>">
+        <form class="col s12" method="post" action="./add.php" >
           <div class="row">
               
             <div class="input-field col s4">
@@ -173,6 +161,7 @@
                 <!-- ===============end of member/nonmember-->
           
         
+		
             
           
             
