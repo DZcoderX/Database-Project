@@ -1,6 +1,6 @@
 <php 
 include ('./my_connect.php');
-
+include ('./addHandle.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,32 +19,7 @@ include ('./my_connect.php');
     </head>
 
     <body>
-        <?php
-					// Enable error logging: 
-						error_reporting(E_ALL ^ E_NOTICE);
-						// mysqli connection via user-defined function
-						include ('./my_connect.php');
-						$mysqli = get_mysqli_conn();
-						
-						
-				  if(isset($_POST['addCust'])){
-					  echo "<script type='text/javascript'>alert('help');</script>";
-					$customer_ID = addslashes ($_POST['customer_ID']);
-					   $first_Name = addslashes ($_POST['first_Name']);
-					   $last_name = addslashes ($_POST['last_name']);
-					   $email = addslashes ($_POST['email']);
-					   $credit_Score = addslashes ($_POST['credit_Score']);
-					
-					$sql = "INSERT INTO Customers ". "(Customer_Id,F_Name, L_Name,email,gender,B_Day,Credit_Rating) ". "VALUES('$customer_ID','$first_Name',$last_name,$email,$credit_Score NOW())";
-					$stmt = mysqli_prepare($sql);
-					$stmt->bind_param("isssi", $customer_ID, $first_Name, $last_name, $email, $credit_Score);
-					$stmt->execute();
-					$stmt->close(); 
-					$mysqli->close();
-					}else {
-				}
-
-				?>
+        
         
 <!--        Collapsible -->
         
@@ -62,33 +37,32 @@ include ('./my_connect.php');
               
                 <!--    End of Database Connection          -->
      <div class="row">
-        <form class="col s12" method="post" action="./add.php" >
+        <form class="col s12" method="get" action="./addHandle.php" >
+		
+		
           <div class="row">
               
             <div class="input-field col s4">
-              <input id="customer_ID" type="text" class="validate">
+              <input id="customer_ID" name="customer_ID" type="text" class="validate">
 
               <label for="customer_ID">Customer ID</label>
             </div>  
               <div class="input-field col s4">
-              <input id="first_Name" type="text" class="validate">
+              <input id="first_Name" name="first_Name" type="text" class="validate">
               <label for="first_Name">First Name</label>
             </div>
               <div class="input-field col s4">
-              <input id="last_name" type="text" class="validate">
+              <input id="last_name" name="last_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
             
           </div>
           <div class="row">
             <div class="input-field col s6">
-              <input id="email" type="email" class="validate">
+              <input id="email" name="email" type="email" class="validate">
               <label for="email">Email</label>
             </div>
-              <div class="input-field col s6">
-              <input id="address" type="text" class="validate">
-              <label for="address">Address</label>
-            </div>
+              
           </div>
           <div class="row">
             <div class="input-field col s6">
@@ -116,7 +90,7 @@ include ('./my_connect.php');
                 <input type="date" class="datepicker">  
             </div>
             <div class="input-field col s4">
-              <input id="credit_Score" type="text" class="validate">
+              <input id="credit_Score" name="credit_Score" type="text" class="validate">
               <label for="credit_Score">Credit Score</label>
             </div>
             
@@ -157,8 +131,8 @@ include ('./my_connect.php');
           
             <div class="input-field col s2">
                 
-                <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
+                <button id="addCust"  class="btn waves-effect waves-light" type="submit">Submit
+                    <i class="material-icons right" >send</i>
                 </button>
             </div>
 		

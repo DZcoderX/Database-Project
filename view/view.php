@@ -13,6 +13,22 @@
     </head>
 
     <body>
+		
+		<form method="get" action="./viewHandle.php">
+		
+			<div class="input-field col s4">
+              <input id="custID" name="custID" type="text" class="validate">
+              <label for="custID">CustomerID</label>
+            </div>
+			
+			<button class="btn waves-effect waves-light" type="submit" >Submit
+    <i class="material-icons right">send</i>
+  </button>
+		
+		
+		</form>
+	
+	
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
