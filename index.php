@@ -75,7 +75,7 @@
          </div>
          <div class="col s12 m6 l3">
                  
-                  <a class="waves-effect waves-light btn-large orange" href="./view/view.php"><i class="material-icons right">visibility</i>Look</a>
+                  <a class="waves-effect waves-light btn-large orange" href="./view/view.php"><i class="material-icons right">visibility</i>Find</a>
           </div>
           </div>
           <div class="space"></div>
@@ -101,13 +101,16 @@
   <div class="container">
     <div class="section" >
 
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 class="white-text">We are here to help.</h4>
-          <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
+      
+			<div class="carousel">
+			<a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+			<a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+			<a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+			<a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+			<a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+		  </div>
+
+		
 
     </div>
   </div>
@@ -164,6 +167,20 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script type="text/javascript">
+  
+  $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  
+  $('.carousel').carousel('next');
+$('.carousel').carousel('next', 3); // Move next n times.
+// Previous slide
+$('.carousel').carousel('prev');
+$('.carousel').carousel('prev', 4); // Move prev n times.
+// Set to nth slide
+$('.carousel').carousel('set', 4);
+  </script>
 
   </body>
 </html>

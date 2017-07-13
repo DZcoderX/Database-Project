@@ -1,29 +1,34 @@
 <body>
-
+<h1> testing</h1>
+<form>
 <?php
-					// Enable error logging: 
-						error_reporting(E_ALL ^ E_NOTICE);
+
+					
+					// Same as error_reporting(E_ALL);
+					error_reporting(E_ALL);
+					int_set('display_errors','no');
+
 						// mysqli connection via user-defined function
 						include ('./my_connect.php');
 						
 						$mysqli = get_mysqli_conn();
 						
-						echo "Test";
 						
+						$cID = $_GET['custID'];
+					
 					  
-						
 					$sql = "SELECT c.F_Name "
 					. "FROM Customers c "
 					. "WHERE c.CustomerID = ?";
 					
 					
 					$stmt = mysqli_prepare($sql);
-					
-					$cID = $_GET['custID'];
+					echo $cID;
+					echo "test";
 					
 					$stmt->bind_param('s', $cID); 
 					$stmt->execute();
-					$stmt->bind_result($);
+					$stmt->bind_result($cID);
 					
 					
 					if ($stmt->fetch()) 
@@ -40,8 +45,9 @@
 					
 					$stmt->close(); 
 					$mysqli->close();
+						
 					
 
 				?>
-				
+				</form>
 				</body>
