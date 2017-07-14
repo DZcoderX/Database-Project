@@ -11,29 +11,39 @@
 //					int_set('display_errors','no');
 
 						// mysqli connection via user-defined function
-						include ('./my_connect.php');
+						include ('./my_connect1.php');
 						
 						$mysqli = get_mysqli_conn();
 						
-						$sql = "SELECT c.F_Name "
-					. "FROM Customers c "
-					. "WHERE c.CustomerID = ?";
+						$sql = "SELECT Sum(T.sub_total) "
+                        . "FROM Transactions T JOIN Customer ON cust_id=customer_id "
+                        . "WHERE (SELECT Count(*) "
+                        . "	FROM Dependent "
+                        . "	WHERE Dependent.customer_id = Customer.customer_id AND "
+                        . "	T.trans_date >= ? AND "
+                        . "	T.trans_date <= ?) >= 1";
+    
 					$stmt = $mysqli->prepare($sql);
-						$cID = $_GET['custID'];
-					
+//						$cID = $_GET['custID'];
+					    $sDate = $_GET['startDate'];
+                        $eDate = $_GET['endDate'];
 					  
-					echo $cID;
-					echo "test";
+//					echo $cID;
+                    echo $sDate;
+                    echo $eDate;
 					
-					$stmt->bind_param('s', $cID); 
+					
+					$stmt->bind_param('ss', $sDate, $eDate); 
 					$stmt->execute();
-					$stmt->bind_result($cID);
+					$stmt->bind_result($total);
 					
+                   
+                    
 					
 					if ($stmt->fetch()) 
 					{ 
 					 
-					echo '<label for="aname">Update Name for Aircraft' . $cID . ', currently named '.$cID.' to: </label>'; 
+					echo '<label for="aname">Update Name for Aircraft' . $total . ', currently named '.$total.' to: </label>'; 
 					} 
 					else
 					{

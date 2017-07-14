@@ -35,22 +35,24 @@
         <br>
         
         <div class="container">
-        <input id="txtstartdate" type="date" class="datepicker" />
+        <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
         
-        <input id="txtenddate" type="date" class="datepicker"/>
+        <input name="endDate" id="txtenddate" type="date" class="datepicker"/>
         </div>
 		<br>
 		<br>
 		
-		
+		<div class="container">
 			<div class="input-field col s4">
               <input id="custID" name="custID" type="text" class="validate">
               <label for="custID">CustomerID</label>
             </div>
 			
 			<button class="btn waves-effect waves-light" type="submit" >Submit
-    <i class="material-icons right">send</i>
-  </button>
+            <i class="material-icons right">send</i>
+        </button>
+            
+            </div>
 		
 		
 		</form>
