@@ -65,9 +65,15 @@
                   </a>
          </div>
           <div class="col s12 m6 l3">
+              
+              <form action="./edit/indexcust.php" method="get">
+                <button class="waves-effect waves-light btn-large orange" type="submit" ><i class="material-icons right">edit</i>Edit</button>
+                 </form>
+<!--
               <form action="./edit/edit.php" method="get">
                 <button class="waves-effect waves-light btn-large orange" type="submit" ><i class="material-icons right">edit</i>Edit</button>
                  </form>
+-->
          </div>
          <div class="col s12 m6 l3">
                  
