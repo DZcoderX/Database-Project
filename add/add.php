@@ -1,5 +1,5 @@
 <php 
-include ('./my_connect.php');
+include ('./my_connect1.php');
 include ('./addHandle.php');
 ?>
 
@@ -43,16 +43,16 @@ include ('./addHandle.php');
           <div class="row">
               
             <div class="input-field col s4">
-              <input id="customer_ID" name="customer_ID" type="text" class="validate">
+              <input id="customer_id" name="customer_id" type="text" class="validate">
 
               <label for="customer_ID">Customer ID</label>
             </div>  
               <div class="input-field col s4">
-              <input id="first_Name" name="first_Name" type="text" class="validate">
+              <input id="f_name" name="f_name" type="text" class="validate">
               <label for="first_Name">First Name</label>
             </div>
               <div class="input-field col s4">
-              <input id="last_name" name="last_name" type="text" class="validate">
+              <input id="l_name" name="l_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
             
@@ -62,20 +62,26 @@ include ('./addHandle.php');
               <input id="email" name="email" type="email" class="validate">
               <label for="email">Email</label>
             </div>
+              <div class="input-field col s6">
+              <input id="address" name="address" type="text" class="validate">
+              <label for="email">Address</label>
+            </div>
               
           </div>
           <div class="row">
+<!--
             <div class="input-field col s6">
-<!--              <i class="material-icons prefix">phone</i>-->
+              <i class="material-icons prefix">phone</i>
               <input id="icon_telephone" type="tel" class="validate">
               <label for="icon_telephone">Telephone</label>
             </div>
+-->
             <div class="input-field col s6">
-                <select>
+                <select name="gender">
                   <option value="" disabled selected>Select your Gender</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
-                  <option value="3">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
                 <label>Gender</label>
             </div>
@@ -87,16 +93,17 @@ include ('./addHandle.php');
                 <p style="margin-right: 50px;">Birthday:</p> 
             </div>
             <div class="input-field col s6">
-                <input type="date" class="datepicker">  
+                <input name="b_day" type="date" class="datepicker">  
             </div>
             <div class="input-field col s4">
-              <input id="credit_Score" name="credit_Score" type="text" class="validate">
-              <label for="credit_Score">Credit Score</label>
+              <input id="credit_rating" name="credit_rating" type="text" class="validate">
+              <label for="credit_rating">Credit Rating</label>
             </div>
             
             
         </div>
 <!--            This section is for member/non-member-->
+<!--
             <div class="row">
                 <div class="input-field col s6">
                     <select onChange="changetextbox();" id="MemIDS" name="MemIDS">
@@ -113,6 +120,7 @@ include ('./addHandle.php');
                   <input type="text" class="validate"  id="MemID" name="MemID"  />
                   <label for="Members">Member ID</label>
                 </div>
+-->
                     <!--
             <script type="text/javascript">
                 function changetextbox()
@@ -126,7 +134,7 @@ include ('./addHandle.php');
             </script>
                         -->
                 
-            </div>
+<!--            </div>-->
                 <!-- ===============end of member/nonmember-->
           
             <div class="input-field col s2">
@@ -232,7 +240,7 @@ include ('./addHandle.php');
                 
                 <div class="input-field col s2">
 <!--                    <p><br></p>&nbsp;-->
-                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action" >Submit
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
