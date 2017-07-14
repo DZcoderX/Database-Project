@@ -19,9 +19,9 @@
 	
 		
 	
-	<form method="get" action="./viewHandle.php">
+	<form method="get" action="./viewHandle.php" class="col s12">
 	
-	<div class="input-field col s12">
+	<div class="container">
 		<select>
 		  <option value="" disabled selected>Choose your option</option>
 		  <option value="1">Option 1</option>
@@ -30,7 +30,15 @@
 		</select>
 		<label>Materialize Select</label>
 	  </div>
-		
+		<br>
+        <br>
+        <br>
+        
+        <div class="container">
+        <input id="txtstartdate" type="date" class="datepicker" />
+        
+        <input id="txtenddate" type="date" class="datepicker"/>
+        </div>
 		<br>
 		<br>
 		
@@ -57,5 +65,22 @@
   });
 	  
 	  </script>
+        
+
+
+        <script type="text/javascript">
+        
+        $("#txtstartdate").datepicker({
+
+            minDate: '01/01/2017',
+          onSelect: function(date) {
+            $("#txtenddate").datepicker('option', 'minDate', date);
+          }
+        });
+
+        $("#txtenddate").datepicker({});
+        
+        
+        </script>
     </body>
   </html>

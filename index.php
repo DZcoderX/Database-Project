@@ -65,9 +65,9 @@
                   </a>
          </div>
           <div class="col s12 m6 l3">
-              
-                <a class="waves-effect waves-light btn-large orange" href="./edit/edit.php"><i class="material-icons right">edit</i>Edit</a>
-                 
+              <form action="./edit/edit.php" method="get">
+                <button class="waves-effect waves-light btn-large orange" type="submit" ><i class="material-icons right">edit</i>Edit</button>
+                 </form>
          </div>
          <div class="col s12 m6 l3">
                  
