@@ -1,4 +1,7 @@
+<!-- 
+Find the sum of sales for each store within a given time interval
 
+-->
 
 <body>
 <h1> testing</h1>
@@ -15,42 +18,41 @@
 						
 						$mysqli = get_mysqli_conn();
 						
-						$sql = "SELECT Sum(T.sub_total) "
-                        . "FROM Transactions T JOIN Customer ON cust_id=customer_id "
-                        . "WHERE (SELECT Count(*) "
-                        . "	FROM Dependent "
-                        . "	WHERE Dependent.customer_id = Customer.customer_id AND "
-                        . "	T.trans_date >= ? AND "
-                        . "	T.trans_date <= ?) >= 1";
-    
+     
+                    $sql = "SELECT T.store_id, S.store_name, Sum(T.sub_total) "
+                    . "FROM (Transactions AS T JOIN Stores AS S ON T.store_id = S.store_id) "
+                    . "WHERE T.trans_date >= ? AND T.trans_date <= ? "
+                    . "GROUP BY T.store_id";
+                    
 					$stmt = $mysqli->prepare($sql);
-//						$cID = $_GET['custID'];
+
 					    $sDate = $_GET['startDate'];
                         $eDate = $_GET['endDate'];
 					  
-//					echo $cID;
-                    echo $sDate;
-                    echo $eDate;
-					
-					
+
 					$stmt->bind_param('ss', $sDate, $eDate); 
+ 
 					$stmt->execute();
-					$stmt->bind_result($total);
+					$stmt->bind_result($TransStoreID,$storeName,$total);
 					
-                   
-                    
-					
-					if ($stmt->fetch()) 
-					{ 
-					 
-					echo '<label for="aname">Update Name for Aircraft' . $total . ', currently named '.$total.' to: </label>'; 
-					} 
-					else
-					{
-					echo '<label for="aname">Record not found</label>'; 
-					}
-					
-					
+//                    echo $TransStoreID;
+//                    echo $storeName;
+//                    echo $total;
+                  
+//                    while($stmt->fetch()){
+//                        echo '<h1>TransactionID: '.$TransStoreID.'</h1>';
+//                    }
+//				
+//					while ($stmt->fetch()) 
+//					{ 
+//					echo '<h1>TransactionID:' . $TransStoreID . ', Store Name: '.$storeName.' Total: '.$total.'</h1>'; 
+//					} 
+//					else
+//					{
+//					echo '<label for="aname">Record not found</label>'; 
+//					}
+//					
+//					
 					$stmt->close(); 
 					$mysqli->close();
 						

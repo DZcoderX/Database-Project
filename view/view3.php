@@ -17,26 +17,23 @@
 
     <body>
 	
-	<form method="get" action="./viewHandle2.php" class="col s12">
+	<form method="get" action="./viewHandle3.php" class="col s12">
 	
-<!--
 	<div class="container">
-		<select name="storeName">
+		<select name="numPromo">
 		  <option value="" disabled selected>Choose your option</option>
-		  <option value="Loblaw">Loblaw</option>
-		  <option value="Zehrs">Zehrs</option>
-		  <option value="No Frills">No Frills</option>
-            <option value="Value-mart">Value-mart</option>
-            <option value="President's Choice Financial">President's Choice Financial</option>
-            <option value="Arz Bakery">Arz Bakery</option>
-            <option value="Wholesale Club">Wholesale Club</option>
-            <option value="Fortinos">Fortinos</option>
-            <option value="T&T Supermarket">T&T Supermarket</option>
-            <option value="Atlantic Superstore">Atlantic Superstore</option>
+		  <option value="0">Zero</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+            <option value="4">Four</option>
+            
+            
 		</select>
-		<label>Stores</label>
+		<label>Number of Promotions</label>
 	  </div>
--->
+        
+        
 		<br>
         <br>
         <br>
@@ -48,7 +45,7 @@
         </div>
 		<br>
 		<br>
-		
+		                  
 		<div class="container">
 <!--
 			<div class="input-field col s4">

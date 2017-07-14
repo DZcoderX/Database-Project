@@ -26,9 +26,10 @@
         <h3 style="text-align:center;">Data Analysis</h3>
       <table class="striped bordered centered">
       <thead>
-         <tr><th style="text-align:center;">Store ID</th><th style="text-align:center;">Store Name</th><th style="text-align:center;">Total</th></tr>
+         <tr><th style="text-align:center;">Item ID</th><th style="text-align:center;">Item name</th><th style="text-align:center;">Number of Promo</th></tr>
       </thead>
       <tbody>
+         
 <?php
 		
 					// Same as error_reporting(E_ALL);
@@ -39,35 +40,44 @@
 						include ('./my_connect1.php');
 						
 						$mysqli = get_mysqli_conn();
-						
-						$sql = "SELECT T.store_id, S.store_name, Sum(T.sub_total)"
-                        . "FROM (Transactions AS T JOIN Stores AS S ON T.store_id = S.store_id)"
-                        . "WHERE T.trans_date >= ? AND T.trans_date <= ? "
-                        . "GROUP BY T.store_id";
+
+                        $sql = "SELECT I.item_id, I.name, COUNT(*) "
+                        . "FROM Item I Join Promotion P ON I.item_id = P.item_id "
+                        . "WHERE P.start_date >= ? AND P.end_date<= ? "
+                        . "GROUP BY I.item_id, I.name "
+                        . "HAVING COUNT(*) >= ?";
     
 					$stmt = $mysqli->prepare($sql);
-
+//						$cID = $_GET['custID'];
+//					    $storeName = $_GET['storeName'];
                         $sDate = $_GET['startDate'];
                         $eDate = $_GET['endDate'];
-        
-					$stmt->bind_param('ss', $sDate, $eDate); 
-					$stmt->execute();
-					$stmt->bind_result($storeID,$storeName,$total);
-				    
+                        $numPromo = $_GET['numPromo'];
+   				
+					
                     
+                $stmt->bind_param('sss', $sDate, $eDate, $numPromo); 
+                $stmt->execute();
+                $stmt->bind_result($itemID,$itemName,$count);
+
+
+				    
+
                     while($stmt->fetch()){
-                        printf ('<tr><td>%s</td>', $storeID);
-                        printf ('<td>%s</td>',$storeName);
-                        printf('<td>%s</td></tr>',$total);
+                        printf ('<tr><td>%s</td>', $itemID);
+                        printf ('<td>%s</td>',$itemName);
+                        printf('<td>%s</td></tr>',$count);
+                       
                     }
 
 					$stmt->close(); 
 					$mysqli->close();
 					
 				?>
+          
           </tbody>
       </table>
     </form>
-  </div>
+    </div>
 </body>
 

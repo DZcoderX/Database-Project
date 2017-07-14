@@ -48,7 +48,7 @@
 		  </div>
 		
 		<div class="input-field col s12">
-		  <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+		  <a class="waves-effect waves-light btn-large" href="./view3.php"><i class="material-icons left" >cloud</i>button</a>
 			</div>
 		</form>
 		

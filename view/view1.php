@@ -21,6 +21,7 @@
 	
 	<form method="get" action="./viewHandle.php" class="col s12">
 	
+<!--
 	<div class="container">
 		<select>
 		  <option value="" disabled selected>Choose your option</option>
@@ -33,6 +34,7 @@
 		<br>
         <br>
         <br>
+-->
         
         <div class="container">
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
