@@ -18,17 +18,13 @@
 <body>
     
     
-  <nav class="red" role="navigation">
+  <nav role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">A Database Project</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Help</a></li>
+      <a href="../index.php" class="brand-logo">Welcome Danial Betres</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down right">
+        
+      <li><a href="../view/view.php">Help</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="side-nav"> 
-        <li><a href="#">Help</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 

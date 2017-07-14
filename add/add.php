@@ -23,6 +23,22 @@ include ('./addHandle.php');
         
 <!--        Collapsible -->
         
+<!-- =============This is the nav bar===========-->
+<nav role="navigation">
+    <div class="nav-wrapper container">
+      <a href="../index.php" class="brand-logo">Home</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down right">
+        <li><a href="../add/add.php">Add</a></li>
+      <li><a href="../edit/indexcust.php">Edit</a></li>
+      <li><a href="../delete/delete.php">Delete</a></li>
+      <li><a href="../view/view.php">View</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+    
+<!-- ============ End of the Nav Bar=============-->
+<div class="container">
  <div id="collapseAdd">
     <ul class="collapsible popout" data-collapsible="accordion">
         <li>
@@ -416,7 +432,7 @@ include ('./addHandle.php');
 </div>
 <!-- end of collapsible===================-->
         
-        
+    </div>    
         
         
         
