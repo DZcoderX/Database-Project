@@ -7,8 +7,8 @@
       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	  
-	  
+
+
 	  <link href="../css/stylesView.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="../css/stylesAdd.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
@@ -17,17 +17,17 @@
 <!-- =============This is the nav bar===========-->
 <nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
-      <a href="../index.php" class="brand-logo">Home</a>
+      <a href="../welcome.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
         <li><a href="../add/add.php">Add</a></li>
       <li><a href="../edit/indexcust.php">Edit</a></li>
-      <li><a href="../delete/delete.php">Delete</a></li>
+      <li><a href="../delete/indexdelete.php">Delete</a></li>
       <li><a href="../view/view.php">View</a></li>
       </ul>
     </div>
   </nav>
-    
-    
+
+
 <!-- ============ End of the Nav Bar=============-->
 
 <br>
@@ -38,14 +38,14 @@
         <div class="container row center">
 
 <?php
-					// Enable error logging: 
+					// Enable error logging:
 						error_reporting(E_ALL ^ E_NOTICE);
 						// mysqli connection via user-defined function
 						include ('./my_connect1.php');
-						
+
 						$mysqli = get_mysqli_conn();
-						
-						
+
+
 
                         $customer_ID = $_GET['customer_id'];
 					   $first_Name = $_GET['f_name'];
@@ -60,15 +60,15 @@
 //					   $last_name = $_GET['last_name'];
 //					   $email = $_GET['email'];
 //					   $credit_Score = $_GET['credit_Score'];
-					   
-					   
-					   
-						
-						
+
+
+
+
+
 					$sql = "INSERT INTO Customer "
 					. "(customer_id,f_name,l_name,gender,b_day,address,email,credit_rating)"
 					. "VALUES(?,?,?,?,?,?,?,?)";
-					
+
 
 					$stmt = $mysqli->prepare($sql);
 
@@ -77,37 +77,37 @@
 
 
 //					$stmt->execute();
-					
+
 					if ($stmt->execute()){
 						echo"success";
 					}else {
 						echo"error";
 					}
-						
-					
-					
-					
-					$stmt->close(); 
+
+
+
+
+					$stmt->close();
 					$mysqli->close();
-					
+
 
 				?>
             </div>
               <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>
-	  
+
 	  <script type="text/javascript">
 		 $(document).ready(function() {
     $('select').material_select();
   });
-	  
+
 	  </script>
-        
+
 
 
         <script type="text/javascript">
-        
+
         $("#txtstartdate").datepicker({
 
             minDate: '01/01/2017',
@@ -117,8 +117,8 @@
         });
 
         $("#txtenddate").datepicker({});
-        
-        
+
+
         </script>
     </body>
   </html>

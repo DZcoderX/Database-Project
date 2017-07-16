@@ -1,4 +1,4 @@
-<php 
+<php
 include ('./my_connect1.php');
 include ('./addHandle.php');
 ?>
@@ -13,30 +13,30 @@ include ('./addHandle.php');
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
+
         <link href="../css/stylesAdd.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        
+
     </head>
 
     <body>
-        
-        
+
+
 <!--        Collapsible -->
-        
+
 <!-- =============This is the nav bar===========-->
 <nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
-      <a href="../index.php" class="brand-logo">Home</a>
+      <a href="../welcome.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
         <li><a href="../add/add.php">Add</a></li>
       <li><a href="../edit/indexcust.php">Edit</a></li>
-      <li><a href="../delete/delete.php">Delete</a></li>
+      <li><a href="../delete/indexdelete.php">Delete</a></li>
       <li><a href="../view/view.php">View</a></li>
       </ul>
     </div>
   </nav>
-    
-    
+
+
 <!-- ============ End of the Nav Bar=============-->
 <div class="container row center">
  <div id="collapseAdd">
@@ -47,22 +47,22 @@ include ('./addHandle.php');
 <!--Customer Entity-->
 
               <!--  Database connection-->
-             
-              
-              
-              
+
+
+
+
                 <!--    End of Database Connection          -->
      <div class="row">
         <form class="col s12" method="get" action="./addHandle.php" >
-		
-		
+
+
           <div class="row">
-              
+
             <div class="input-field col s4">
               <input id="customer_id" name="customer_id" type="text" class="validate">
 
               <label for="customer_ID">Customer ID</label>
-            </div>  
+            </div>
               <div class="input-field col s4">
               <input id="f_name" name="f_name" type="text" class="validate">
               <label for="first_Name">First Name</label>
@@ -71,7 +71,7 @@ include ('./addHandle.php');
               <input id="l_name" name="l_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
-            
+
           </div>
           <div class="row">
             <div class="input-field col s6">
@@ -82,7 +82,7 @@ include ('./addHandle.php');
               <input id="address" name="address" type="text" class="validate">
               <label for="email">Address</label>
             </div>
-              
+
           </div>
           <div class="row">
 <!--
@@ -101,22 +101,22 @@ include ('./addHandle.php');
                 </select>
                 <label>Gender</label>
             </div>
-              
-            
+
+
          </div>
          <div class="row">
             <div class="input-field col s2">
-                <p style="margin-right: 50px;">Birthday:</p> 
+                <p style="margin-right: 50px;">Birthday:</p>
             </div>
             <div class="input-field col s6">
-                <input name="b_day" type="date" class="datepicker">  
+                <input name="b_day" type="date" class="datepicker">
             </div>
             <div class="input-field col s4">
               <input id="credit_rating" name="credit_rating" type="text" class="validate">
               <label for="credit_rating">Credit Rating</label>
             </div>
-            
-            
+
+
         </div>
 <!--            This section is for member/non-member-->
 <!--
@@ -127,12 +127,12 @@ include ('./addHandle.php');
                       <option value="1">Member</option>
                       <option value="2">Non Member</option>
                     </select>
-                    <label>(Non)Member</label> 
-                
-                    
+                    <label>(Non)Member</label>
+
+
             </div>
                 <div class="input-field col s6">
-                  
+
                   <input type="text" class="validate"  id="MemID" name="MemID"  />
                   <label for="Members">Member ID</label>
                 </div>
@@ -149,20 +149,20 @@ include ('./addHandle.php');
                 }
             </script>
                         -->
-                
+
 <!--            </div>-->
                 <!-- ===============end of member/nonmember-->
-          
+
             <div class="input-field col s2">
-                
+
                 <button id="addCust"  class="btn waves-effect waves-light" type="submit">Submit
                     <i class="material-icons right" >send</i>
                 </button>
             </div>
-		
-            
-          
-            
+
+
+
+
         </form>
       </div>
     </div>
@@ -174,11 +174,11 @@ include ('./addHandle.php');
     <li>
       <div class="collapsible-header"><i class="material-icons">contacts</i>Dependent</div>
       <div class="collapsible-body">
-          
+
        <div class="row">
         <form class="col s12" action="#">
           <div class="row">
-              
+
               <div class="input-field col s6">
               <input id="first_Name" type="text" class="validate">
               <label for="first_Name">First Name</label>
@@ -187,10 +187,10 @@ include ('./addHandle.php');
               <input id="last_name" type="text" class="validate">
               <label for="last_name">Last Name</label>
             </div>
-            
+
           </div>
-          
-            
+
+
           <div class="row">
             <div class="input-field col s4">
                 <select>
@@ -201,35 +201,35 @@ include ('./addHandle.php');
                 </select>
                 <label>Gender</label>
             </div>
-            
+
             <div class="input-field col s2">
-                <p style="margin-right: 50px;">Birthday:</p> 
+                <p style="margin-right: 50px;">Birthday:</p>
             </div>
             <div class="input-field col s6">
-                <input type="date" class="datepicker">  
+                <input type="date" class="datepicker">
             </div>
          </div>
-            
+
           <div class="input-field col s2">
 <!--                    <p><br></p>&nbsp;-->
                     <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
-            
+
         </form>
       </div>
-        
+
     </div>
 </li>
 <!--        End of Dependent Entity-->
-        
-        
+
+
 <!--            Beginning of Transaction Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">receipt</i>Transaction</div>
           <div class="collapsible-body">
-            
+
            <div class="row">
             <form class="col s12">
               <div class="row">
@@ -242,18 +242,18 @@ include ('./addHandle.php');
                   <input id="subtotal" type="text" class="validate">
                   <label for="subtotal">Sub_Total</label>
                 </div>
-                  
+
                 <div class="input-field col s1">
                   <p>Date: </p>
                 </div>
-                  
+
                 <div class="input-field col s4">
-                    <input type="date" class="datepicker" name="Birthday" />  
-                        
+                    <input type="date" class="datepicker" name="Birthday" />
+
                 </div>
 
               </div>
-                
+
                 <div class="input-field col s2">
 <!--                    <p><br></p>&nbsp;-->
                     <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action" >Submit
@@ -261,16 +261,16 @@ include ('./addHandle.php');
                     </button>
                 </div>
         </form>
-      </div>  
+      </div>
     </div>
 </li>
 <!--        End of Transaction Entity-->
-        
+
 <!--            Beginning of Items Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">list</i>Items</div>
           <div class="collapsible-body">
-            
+
             <div class="row">
             <form class="col s12">
               <div class="row">
@@ -283,7 +283,7 @@ include ('./addHandle.php');
                   <input id="weight" type="text" class="validate">
                   <label for="weight">Weight</label>
                 </div>
-                  
+
                   <div class="input-field col s4">
                   <input id="brand" type="text" class="validate">
                   <label for="brand">Brand</label>
@@ -296,9 +296,9 @@ include ('./addHandle.php');
                   <input id="name" type="text" class="validate">
                   <label for="name">Name</label>
                 </div>
-                  
-                  
-            
+
+
+
 
                       </div>
 
@@ -309,15 +309,15 @@ include ('./addHandle.php');
                     </button>
                 </div>
                 </form>
-              </div>  
+              </div>
 
-            
-            
-            
+
+
+
           </div>
         </li>
 <!--        End of Items Entity-->
-        
+
 <!--            Beginning of Promotion Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">loyalty</i>Promotion</div>
@@ -334,20 +334,20 @@ include ('./addHandle.php');
                       <input id="rebate" type="text" class="validate">
                       <label for="rebate">Rebate</label>
                     </div>
-                   
+
                   </div>
                     <div class="row">
 
                     <div class="input-field col s4">
                      Beginning Date
-                        <input type="date" class="datepicker">  
+                        <input type="date" class="datepicker">
                     </div>
                     <div class="input-field col s4">
                      End Date
-                        <input type="date" class="datepicker">  
+                        <input type="date" class="datepicker">
                     </div>
                     </div>
-                    
+
                     <div class="input-field col s2">
 <!--                    <p><br></p>&nbsp;-->
                     <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
@@ -355,12 +355,12 @@ include ('./addHandle.php');
                     </button>
                 </div>
                 </form>
-              </div> 
+              </div>
           </div>
         </li>
 <!--        End of Promotion Entity-->
-  
-        
+
+
         <!--            Beginning of Stores Entity-->
         <li>
           <div class="collapsible-header"><i class="material-icons">store</i>Stores</div>
@@ -402,47 +402,47 @@ include ('./addHandle.php');
                           <option value="" disabled selected>Retail/WholeSale</option>
                           <option value="Retail">Retail</option>
                           <option value="WholeSale">WholeSale</option>
-                          
+
                         </select>
                         <label>Type of Store</label>
                     </div>
-                      
-                    
-                      
-                      
+
+
+
+
                   </div>
-                    
+
                     <div class="input-field col s2">
 <!--                    <p><br></p>&nbsp;-->
                     <button id="addCust" class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                     </button>
                 </div>
-                    
+
                 </form>
               </div>
           </div>
         </li>
         <!--        End of Store Entity-->
-  
 
-     
+
+
 
      </ul>
 </div>
 <!-- end of collapsible===================-->
-        
-    </div>    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+    </div>
+
+
+
+
+
+
+
+
+
+
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>
