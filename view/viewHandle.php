@@ -1,14 +1,50 @@
-<!-- 
-Find the sum of sales for each store within a given time interval
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>The Materialize Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>   
+       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <style>
+         div {
+            width : 200px;	
+            height : 200px;				
+         } 
+      </style>
+   </head>
 
--->
+
 
 <body>
-<h1> testing</h1>
-<form>
+<!-- =============This is the nav bar===========-->
+<nav role="navigation">
+    <div class="nav-wrapper container">
+      <a href="../index.php" class="brand-logo">Home</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down right">
+        <li><a href="../add/add.php">Add</a></li>
+      <li><a href="../edit/indexcust.php">Edit</a></li>
+      <li><a href="../delete/delete.php">Delete</a></li>
+      <li><a href="../view/view.php">View</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+    
+<!-- ============ End of the Nav Bar=============-->
+    <div class="container">
+    <form>
+        
+        <h3 style="text-align:center;">Data Analysis</h3>
+      <table class="striped bordered centered">
+      <thead>
+         <tr><th style="text-align:center;">Total</th></tr>
+      </thead>
+      <tbody>
 <?php
-
-					
+		
 					// Same as error_reporting(E_ALL);
 					error_reporting(E_ALL);
 //					int_set('display_errors','no');
@@ -18,47 +54,52 @@ Find the sum of sales for each store within a given time interval
 						
 						$mysqli = get_mysqli_conn();
 						
-     
-                    $sql = "SELECT T.store_id, S.store_name, Sum(T.sub_total) "
-                    . "FROM (Transactions AS T JOIN Stores AS S ON T.store_id = S.store_id) "
-                    . "WHERE T.trans_date >= ? AND T.trans_date <= ? "
-                    . "GROUP BY T.store_id";
-                    
+						$sql = "SELECT Sum(T.sub_total) FROM Transactions T JOIN Customer "
+                        . "ON cust_id=customer_id where "
+                        . "(SELECT Count(*) "
+                        . "FROM Dependent "
+                        . "WHERE Dependent.customer_id = Customer.customer_id) = ? "
+                        . "AND T.trans_date BETWEEN ? AND ? ";
+    
 					$stmt = $mysqli->prepare($sql);
 
-					    $sDate = $_GET['startDate'];
+                        $sDate = $_GET['startDate'];
                         $eDate = $_GET['endDate'];
-					  
-
-					$stmt->bind_param('ss', $sDate, $eDate); 
- 
+                        $num = $_GET['number'];
+        
+					$stmt->bind_param('ssi', $sDate, $eDate, $num); 
 					$stmt->execute();
-					$stmt->bind_result($TransStoreID,$storeName,$total);
-					
-//                    echo $TransStoreID;
-//                    echo $storeName;
-//                    echo $total;
-                  
-//                    while($stmt->fetch()){
-//                        echo '<h1>TransactionID: '.$TransStoreID.'</h1>';
-//                    }
-//				
-//					while ($stmt->fetch()) 
-//					{ 
-//					echo '<h1>TransactionID:' . $TransStoreID . ', Store Name: '.$storeName.' Total: '.$total.'</h1>'; 
-//					} 
-//					else
-//					{
-//					echo '<label for="aname">Record not found</label>'; 
-//					}
-//					
-//					
+					$stmt->bind_result($total);
+				    
+                    
+                    while($stmt->fetch()){
+                       
+                        printf('<td>%s</td></tr>',$total);
+                    }
+
 					$stmt->close(); 
 					$mysqli->close();
-						
 					
-
 				?>
-				</form>
-				</body>
+          </tbody>
+      </table>
+    </form>
+  </div>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+    
+    <script type="text/javascript">
+        
+        $( document ).ready(function{
+               $(".dropdown-button").dropdown();
+            $(".button-collapse").sideNav();             
+                            })
+            
+        
+        
+    </script>
+    
+</body>
 
+</html>

@@ -20,6 +20,7 @@ p {
 }
   .parallax-container .section {
     width: 100%;
+      
   }
 
 @media only screen and (max-width : 992px) {
@@ -60,11 +61,13 @@ footer.page-footer {
     height: 50px;
     
     align-self: center;
-    
+ 
 }
 .space {
-    padding-top: 5%;
-    padding-bottom: 20px;
+    padding-top: 40%;
+    height: 100px;
+    padding-bottom: 20%;
+    
 }
 h1 {
   font-size: 4.4em;
@@ -77,14 +80,16 @@ h1 {
                -1px 1px 0 #ebebeb,
                5px 5px 0 #333;
   
-  color: yellowgreen;
+  color: darkred;
 }
 
 
 
 
 
-
+.darkred {
+    background-color: darkred; 
+}
 
 
 

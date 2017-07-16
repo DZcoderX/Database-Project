@@ -18,116 +18,76 @@
 <body>
     
     
-  <nav role="navigation">
-    <div class="nav-wrapper container">
-      <a href="../index.php" class="brand-logo">Welcome Danial Betres</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down right">
-        
-      <li><a href="../view/view.php">Help</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center text-lighten-2">Welcome to the Food-Chain Management System!</h1>
+        <h1 class="header center text-lighten-2">Welcome! </h1>
+        
+             <div class="space"></div>
+          
+        <br>
+        <br>
+        
+      <!--   Icon Section   -->
+      <div class="row center">
+          
         
           
-        <div class="row center">
-          <a class="btn-large waves-effect waves-light orange">Get Started</a>
-        </div>
+          <div class="col s8 m6 l6">
+             
+                <a class="waves-effect waves-light btn-large darkred" href="./login.php"><i class="material-icons right">edit</i>
+                    Login
+                  </a>
+         </div>
+          <div class="col s8 m6 l6">
+              
+              <a class="waves-effect waves-light btn-large darkred" href=""><i class="material-icons right">add</i>
+                    Create Account
+                  </a>
+
+         </div>
+        
+          </div>
+<!--          <div class="space"></div>-->
+
         <br><br>
 
       </div>
     </div>
+      <div class="container" row="center">
     <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+          </div>
   </div>
 
 <!--============================================== -->
-    <footer class="page-footer red">
-  <div class="container">
-    <div class="section">        
-        <br>
-      <!--   Icon Section   -->
-      <div class="row">
-          
-        <div class="space"></div>
-          <div class="col s12 m6 l3">
-              
-                <a class="waves-effect waves-light btn-large orange" href="./add/add.php"><i class="material-icons right">add</i>
-                    Add
-                  </a>
-         </div>
-          <div class="col s12 m6 l3">
-              
-              <form action="./edit/indexcust.php" method="get">
-                <button class="waves-effect waves-light btn-large orange" type="submit" ><i class="material-icons right">edit</i>Edit</button>
-                 </form>
-<!--
-              <form action="./edit/edit.php" method="get">
-                <button class="waves-effect waves-light btn-large orange" type="submit" ><i class="material-icons right">edit</i>Edit</button>
-                 </form>
--->
-         </div>
-         <div class="col s12 m6 l3">
-                 
-                <a class="waves-effect waves-light btn-large orange" href="./delete/delete.php"><i class="material-icons right">delete</i>Delete</a>
-         </div>
-         <div class="col s12 m6 l3">
-                 
-                  <a class="waves-effect waves-light btn-large orange" href="./view/view.php"><i class="material-icons right">visibility</i>Find</a>
-          </div>
-          </div>
-          <div class="space"></div>
-      
-    </div>
-  </div>
-        
-    </footer>
+    
+ 
+    
 <!--==============================================-->
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-
-      </div>
-    </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-    
+ 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <!--    3nd content area-->
-    <footer class="page-footer red">
-  <div class="container">
-    <div class="section" >
-
-      
-			<div class="carousel">
-			<a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-			<a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-			<a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-			<a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-			<a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
-		  </div>
-
-		
-
-    </div>
-  </div>
-      </footer>
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
 
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
 
     
-  <footer class="page-footer red">
+ 
+    
+  <footer class="page-footer darkred">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">

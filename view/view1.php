@@ -36,20 +36,20 @@
 	
 	<form method="get" action="./viewHandle.php" class="col s12">
 	
-<!--
 	<div class="container">
-		<select>
+		<select name="number">
 		  <option value="" disabled selected>Choose your option</option>
-		  <option value="1">Option 1</option>
-		  <option value="2">Option 2</option>
-		  <option value="3">Option 3</option>
+		  <option value="0">Zero</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+		  <option value="4">Four</option>
 		</select>
 		<label>Materialize Select</label>
 	  </div>
 		<br>
         <br>
         <br>
--->
         
         <div class="container">
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
@@ -60,10 +60,12 @@
 		<br>
 		
 		<div class="container">
+<!--
 			<div class="input-field col s4">
               <input id="custID" name="custID" type="text" class="validate">
               <label for="custID">CustomerID</label>
             </div>
+-->
 			
 			<button class="btn waves-effect waves-light" type="submit" >Submit
             <i class="material-icons right">send</i>
