@@ -19,7 +19,7 @@ p {
   color: rgba(255,255,255,.9);
 }
   .parallax-container .section {
-    width: 100%;
+    width: 75%;
       
   }
 
@@ -46,16 +46,17 @@ p {
   font-size: inherit;
 }
 
+/*
 footer.page-footer {
   margin: 0;
 }
+*/
 
 .sizeButton {
     padding: 25px;
 }
-.waves-effect waves-light btn-large red{
-    height: 25px;
-}
+
+/*
 .col.s12 {
    width: 100%;
     height: 50px;
@@ -63,10 +64,11 @@ footer.page-footer {
     align-self: center;
  
 }
-.space {
+*/
+.space1 {
     padding-top: 40%;
-    height: 100px;
-    padding-bottom: 20%;
+    height: 50px;
+    padding-bottom: 10%;
     
 }
 h1 {
@@ -83,7 +85,9 @@ h1 {
   color: darkred;
 }
 
-
+.sizing{
+    padding-bottom: 25%;
+}
 
 
 

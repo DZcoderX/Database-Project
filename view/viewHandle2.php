@@ -8,7 +8,10 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>   
        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-      <style>
+       
+       <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
+      
+       <style>
          div {
             width : 200px;	
             height : 200px;				
@@ -20,8 +23,9 @@
 
 <body>
 <!-- =============This is the nav bar===========-->
-<nav role="navigation">
-    <div class="nav-wrapper container">
+
+    <nav role="navigation" class="darkred">
+    <div class="nav-wrapper container darkred">
       <a href="../index.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
         <li><a href="../add/add.php">Add</a></li>

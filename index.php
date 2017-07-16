@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Food Chain Manager</title>
+  <title>Grocery</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,40 +25,45 @@
         <br><br>
         <h1 class="header center text-lighten-2">Welcome! </h1>
         
-             <div class="space"></div>
+             <div class="space1"></div>
           
-        <br>
-        <br>
+        
         
       <!--   Icon Section   -->
       <div class="row center">
           
-        
-          
           <div class="col s8 m6 l6">
-             
+<!--             <div class="space"></div>-->
                 <a class="waves-effect waves-light btn-large darkred" href="./login.php"><i class="material-icons right">edit</i>
                     Login
                   </a>
+              
          </div>
+          
           <div class="col s8 m6 l6">
               
               <a class="waves-effect waves-light btn-large darkred" href=""><i class="material-icons right">add</i>
                     Create Account
                   </a>
+               <br>
+   
 
          </div>
+     
         
           </div>
 <!--          <div class="space"></div>-->
-
-        <br><br>
+     
 
       </div>
+         
     </div>
+      
       <div class="container" row="center">
     <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+          
           </div>
+     
   </div>
 
 <!--============================================== -->
@@ -67,18 +72,21 @@
     
 <!--==============================================-->
 
- 
+<!--
+  <br>
     <br>
     <br>
     <br>
     <br>
     <br>
+        <br><br>
+      <br>
+   
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+-->
+    
 <!--    3nd content area-->
 
 
@@ -87,7 +95,7 @@
     
  
     
-  <footer class="page-footer darkred">
+    <footer class="page-footer darkred">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -117,6 +125,7 @@
         </div>
       </div>
     </div>
+        
     <div class="footer-copyright">
       <div class="container">
       Made by Jon, Danial, and David
@@ -129,20 +138,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script type="text/javascript">
   
-  $(document).ready(function(){
-      $('.carousel').carousel();
-    });
-  
-  $('.carousel').carousel('next');
-$('.carousel').carousel('next', 3); // Move next n times.
-// Previous slide
-$('.carousel').carousel('prev');
-$('.carousel').carousel('prev', 4); // Move prev n times.
-// Set to nth slide
-$('.carousel').carousel('set', 4);
-  </script>
 
   </body>
 </html>

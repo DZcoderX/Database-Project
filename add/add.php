@@ -24,7 +24,7 @@ include ('./addHandle.php');
 <!--        Collapsible -->
         
 <!-- =============This is the nav bar===========-->
-<nav role="navigation">
+<nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
       <a href="../index.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
@@ -38,7 +38,7 @@ include ('./addHandle.php');
     
     
 <!-- ============ End of the Nav Bar=============-->
-<div class="container">
+<div class="container row center">
  <div id="collapseAdd">
     <ul class="collapsible popout" data-collapsible="accordion">
         <li>

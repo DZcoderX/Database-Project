@@ -3,6 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/styleWelcome.css">
   <style>
     body {
       display: flex;
@@ -42,7 +43,7 @@
       <img class="responsive-img" style="width: 250px;" src="https://i.gyazo.com/1412b63bee612e979ef949196cc8769e.png" />
       <div class="section"></div>
 
-      <h5 class="indigo-text">Please, login into your account</h5>
+      <h5 style="color:darkred;">Please, login into your account</h5>
       <div class="section"></div>
 
       <div class="container">
@@ -74,13 +75,13 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect darkred'>Login</button>
               </div>
             </center>
           </form>
         </div>
       </div>
-      <a href="#!">Create account</a>
+      <a href="#!" style="color: darkred;">Create account</a>
     </center>
 
     <div class="section"></div>

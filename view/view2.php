@@ -13,12 +13,13 @@
 	  
 	  
 	  <link href="../css/stylesView.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
     </head>
 
     <body>
         
 <!-- =============This is the nav bar===========-->
-<nav role="navigation">
+<nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
       <a href="../index.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">

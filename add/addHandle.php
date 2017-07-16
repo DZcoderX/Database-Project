@@ -10,11 +10,12 @@
 	  
 	  
 	  <link href="../css/stylesView.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/stylesAdd.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
 
     <body>
 <!-- =============This is the nav bar===========-->
-<nav role="navigation">
+<nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
       <a href="../index.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
@@ -29,7 +30,12 @@
     
 <!-- ============ End of the Nav Bar=============-->
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+        <div class="container row center">
 
 <?php
 					// Enable error logging: 
@@ -70,14 +76,14 @@
 					$stmt->bind_param("issssssi", $customer_ID, $first_Name, $last_name, $Gender, $Birthday, $Address, $email, $credit_rating);
 
 
-					$stmt->execute();
+//					$stmt->execute();
 					
-//					if ($stmt->execute()){
-//						echo"success";
-//					}else {
-//						echo"error";
-//					}
-//						
+					if ($stmt->execute()){
+						echo"success";
+					}else {
+						echo"error";
+					}
+						
 					
 					
 					
@@ -86,6 +92,7 @@
 					
 
 				?>
+            </div>
               <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.min.js"></script>

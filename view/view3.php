@@ -13,12 +13,13 @@
 	  
 	  
 	  <link href="../css/stylesView.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
     </head>
 
     <body>
         
 <!-- =============This is the nav bar===========-->
-<nav role="navigation">
+<nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
       <a href="../index.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
@@ -35,6 +36,7 @@
         <br>
         <br>
         <br>
+        <div class="sizing">
 	<form method="get" action="./viewHandle3.php" class="col s12">
 	
 	<div class="container">
@@ -80,6 +82,7 @@
 		
 		
 		</form>
+            </div>
 	
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

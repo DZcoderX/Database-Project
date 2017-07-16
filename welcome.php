@@ -23,7 +23,7 @@
       <a href="./index.php" class="brand-logo">Welcome Danial Betres</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
         
-      <li><a href="../view/view.php">Help</a></li>
+      <li><a href="../view/view.php"></a>Grocertrack</li>
       </ul>
     </div>
   </nav>
