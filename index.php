@@ -23,69 +23,63 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center text-lighten-2">Welcome! </h1>
+        <h1 style="margin-left: 45%"  class="header center text-lighten-2">Welcome! </h1>
         
-             <div class="space1"></div>
+             <div class="space"></div>
+          
           
         
         
       <!--   Icon Section   -->
-      <div class="row center">
-          
-          <div class="col s8 m6 l6">
+        <div  style="margin-left: 37%"  class="container">
+          <div class="row center">
+        
+          <div class="col s12 m6 l6">
 <!--             <div class="space"></div>-->
-                <a class="waves-effect waves-light btn-large darkred" href="./login.php"><i class="material-icons right">edit</i>
+                <a class="waves-effect waves-light btn darkred" href="./login.php"><i class="material-icons right">edit</i>
                     Login
                   </a>
               
          </div>
-          
-          <div class="col s8 m6 l6">
+    
+          <div class="col s12 m6 l6">
               
-              <a class="waves-effect waves-light btn-large darkred" href=""><i class="material-icons right">add</i>
+              <a class="waves-effect waves-light btn darkred" href=""><i class="material-icons right">add</i>
                     Create Account
                   </a>
                <br>
    
 
          </div>
-     
+     </div>
         
           </div>
-<!--          <div class="space"></div>-->
-     
+          <div class="space"></div>     
 
       </div>
          
     </div>
       
-      <div class="container" row="center">
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+      <div class="container">
+    <div class="parallax">
+        
+        <img src="background1.jpg" alt="Unsplashed background img 1">
+         
           
+          </div>
+           
           </div>
      
   </div>
+  
 
 <!--============================================== -->
     
  
     
 <!--==============================================-->
-
-<!--
-  <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-        <br><br>
-      <br>
-   
-    <br>
-    <br>
-    <br>
--->
+<!--    <div class="space"></div>-->
+  
     
 <!--    3nd content area-->
 

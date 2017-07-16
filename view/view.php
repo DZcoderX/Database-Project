@@ -6,6 +6,8 @@
       <!--Import materialize.css-->
      
 	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+        
+        <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
@@ -24,7 +26,7 @@
 		  <h2>Find 1</h2>
 		  <p class="white-text">Fine store sales for a given time interval</p>
             
-            <a class="waves-effect waves-light btn-large" href="./view1.php"><i class="material-icons left">cloud</i>button</a>
+            <a class="waves-effect waves-light btn-large"  href="./view1.php"><i class="material-icons left">cloud</i>button</a>
 		</div>
 		<div class="carousel-item amber white-text" href="#two!">
 		  <h2>Find 2</h2>

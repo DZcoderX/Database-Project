@@ -6,6 +6,8 @@
       <!--Import materialize.css-->
      
 	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+        
+        <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
@@ -17,28 +19,28 @@
 		<div class="carousel carousel-slider center" data-indicators="true">
 		
 		<div class="carousel-fixed-item center">
-		  <a class="btn waves-effect white grey-text darken-text-2">button</a>
+		  <a class="btn waves-effect white grey-text darken-text-2" href="../welcome.php">Home</a>
 		</div>
 		
 		<div class="carousel-item red white-text" href="#one!">
 		  <h2>Find 1</h2>
 		  <p class="white-text">Fine store sales for a given time interval</p>
             
-            <a class="waves-effect waves-light btn-large" href="./view1.php"><i class="material-icons left">cloud</i>button</a>
+            <a class="waves-effect waves-light btn-large darkred" href="./view1.php"><i class="material-icons left">cloud</i>button</a>
 		</div>
 		<div class="carousel-item amber white-text" href="#two!">
 		  <h2>Find 2</h2>
 		  <p class="white-text">Fine customers with least dependance.</p>
             
             
-		  <a class="waves-effect waves-light btn-large" href="./view2.php"><i class="material-icons left">cloud</i>button</a>
+		  <a class="waves-effect waves-light btn-large darkred" href="./view2.php"><i class="material-icons left">cloud</i>button</a>
 		  
 		</div>
 		<div class="carousel-item green white-text" href="#three!">
 		  <h2>PLACE HOLDER </h2>
 		  <p class="white-text">PLACE HOLDER</p>
             
-		  <a class="waves-effect waves-light btn-large" href="./view3.php"><i class="material-icons left" >cloud</i>button</a>
+		  <a class="waves-effect waves-light btn-large darkred" href="./view3.php"><i class="material-icons left" >cloud</i>button</a>
 			
             
 		</div>
