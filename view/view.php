@@ -18,29 +18,41 @@
 		
 		<div class="carousel carousel-slider center" data-indicators="true">
 		
+<!--
 		<div class="carousel-fixed-item center">
 		  <a class="btn waves-effect white grey-text darken-text-2">button</a>
 		</div>
+-->
 		
 		<div class="carousel-item red white-text" href="#one!">
 		  <h2>Find 1</h2>
-		  <p class="white-text">Fine store sales for a given time interval</p>
+		  <p class="white-text">Find the total sales from customers with 0 or more dependent
+          within a time period.</p>
             
-            <a class="waves-effect waves-light btn-large"  href="./view1.php"><i class="material-icons left">cloud</i>button</a>
+            <a class="waves-effect waves-light btn-large darkred"  href="./view1.php"><i class="material-icons left">cloud</i>Find</a>
 		</div>
 		<div class="carousel-item amber white-text" href="#two!">
 		  <h2>Find 2</h2>
-		  <p class="white-text">Fine customers with least dependance.</p>
+		  <p class="white-text">Find the sum of sales for each store within a given time interval.</p>
             
             
-		  <a class="waves-effect waves-light btn-large" href="./view2.php"><i class="material-icons left">cloud</i>button</a>
+		  <a class="waves-effect waves-light btn-large darkred" href="./view2.php"><i class="material-icons left">cloud</i>Find</a>
 		  
 		</div>
-		<div class="carousel-item green white-text" href="#three!">
-		  <h2>PLACE HOLDER </h2>
-		  <p class="white-text">PLACE HOLDER</p>
+		<div class="carousel-item orange white-text" href="#three!">
+		  <h2>Find 3</h2>
+		  <p class="white-text">Find all items that have 2 or more promotions in a given month.</p>
             
-		  <a class="waves-effect waves-light btn-large" href="./view3.php"><i class="material-icons left" >cloud</i>button</a>
+		  <a class="waves-effect waves-light btn-large darkred" href="./view3.php"><i class="material-icons left" >cloud</i>Find</a>
+			
+            
+		</div>
+            
+            <div class="carousel-item orange white-text" href="#three!">
+		  <h2>Find 4</h2>
+		  <p class="white-text">Find all the promotions offered by a specific brand and give the total rebate amount given back.</p>
+            
+		  <a class="waves-effect waves-light btn-large darkred" href="./view4.php"><i class="material-icons left" >cloud</i>Find</a>
 			
             
 		</div>
@@ -83,7 +95,7 @@
 autoplay()   
 function autoplay() {
     $('.carousel').carousel('next');
-    setTimeout(autoplay, 6000);
+    setTimeout(autoplay, 15000);
 }
 		</script>
     </body>
