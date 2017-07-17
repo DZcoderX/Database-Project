@@ -84,7 +84,7 @@ $mysqli->close();
 </body>
 <br>
 <form action="../welcome.php" style="text-align:center">
-  <button style="height:30px;width:130px"  class="btn waves-effect waves-light" type="submit" > Home
+  <button style="height:30px;width:130px"  class="btn waves-effect waves-light darkred" type="submit" > Home
 
           </button>
 </form>

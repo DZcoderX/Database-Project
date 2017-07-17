@@ -96,7 +96,7 @@ $stmt->close();
 $mysqli->close();
 ?>
 <br>
-<button style="height:50px;width:200px"  class="btn waves-effect waves-light" type="submit" >Confirm
+<button style="height:50px;width:200px"  class="btn waves-effect waves-light darkred" type="submit" >Confirm
             <i class="material-icons right">send</i>
         </button>
 </form>

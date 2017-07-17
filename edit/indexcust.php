@@ -78,7 +78,7 @@ $mysqli->close();
 ?>
 
 <br>
-<button style="height:50px;width:200px;text-align:center"  class="btn waves-effect waves-light" type="submit" >Continue
+<button style="height:50px;width:200px;text-align:center"  class="btn waves-effect waves-light darkred" type="submit" >Continue
             <i class="material-icons right">send</i>
         </button>
 </form>

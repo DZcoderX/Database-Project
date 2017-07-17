@@ -128,7 +128,7 @@ echo '<br><br><label for="promo_id" ><font size="3"><p style="margin-left:35%">A
  ?>
 
 <!-- <input type="submit" value="Update"/> -->
-<button style="height:50px;width:200px;margin-left:41%"  class="btn waves-effect waves-light" type="submit" >submit
+<button style="height:50px;width:200px;margin-left:41%"  class="btn waves-effect waves-light darkred" type="submit" >submit
             <i class="material-icons right">send</i>
         </button>
 
