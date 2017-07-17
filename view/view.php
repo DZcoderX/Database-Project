@@ -48,7 +48,7 @@
             
 		</div>
             
-            <div class="carousel-item orange white-text" href="#three!">
+            <div class="carousel-item pink white-text" href="#three!">
 		  <h2>Find 4</h2>
 		  <p class="white-text">Find all the promotions offered by a specific brand and give the total rebate amount given back.</p>
             

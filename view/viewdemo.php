@@ -23,14 +23,14 @@
 		</div>
 		
 		<div class="carousel-item red white-text" href="#one!">
-		  <h2>Find 1</h2>
+		  <h1>Find 1</h1>
 		  <p class="white-text">Find the total sales from customers with 0 or more dependent
           within a time period.</p>
             
             <a class="waves-effect waves-light btn-large darkred"  href="./view1.php"><i class="material-icons left">cloud</i>Find</a>
 		</div>
-		<div class="carousel-item amber white-text" href="#two!">
-		  <h2>Find 2</h2>
+		<div class="carousel-item purple white-text" href="#two!">
+		  <h1>Find 2</h1>
 		  <p class="white-text">Find the sum of sales for each store within a given time interval.</p>
             
             
@@ -38,7 +38,7 @@
 		  
 		</div>
 		<div class="carousel-item orange white-text" href="#three!">
-		  <h2>Find 3</h2>
+		  <h1>Find 3</h1>
 		  <p class="white-text">Find all items that have 2 or more promotions in a given month.</p>
             
 		  <a class="waves-effect waves-light btn-large darkred" href="./view3.php"><i class="material-icons left" >cloud</i>Find</a>
@@ -46,8 +46,8 @@
             
 		</div>
             
-            <div class="carousel-item orange white-text" href="#three!">
-		  <h2>Find 4</h2>
+            <div class="carousel-item pink white-text" href="#three!">
+		  <h1>Find 4</h1>
 		  <p class="white-text">Find all the promotions offered by a specific brand and give the total rebate amount given back.</p>
             
 		  <a class="waves-effect waves-light btn-large darkred" href="./view4.php"><i class="material-icons left" >cloud</i>Find</a>
