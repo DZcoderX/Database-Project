@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
   <html>
     <head>
@@ -36,25 +34,29 @@
 
 
 	<form method="get" action="./viewHandle.php" class="col s12">
-
+<br>
+<br>
+<br>
 	<div class="container">
 		<select name="number">
-		  <option value="" disabled selected>Choose your option</option>
+		  <option value="" disabled selected>Number of Dependents</option>
 		  <option value="0">Zero</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
 		  <option value="3">Three</option>
 		  <option value="4">Four</option>
 		</select>
-		<label>Materialize Select</label>
+		<label>Number of dependents</label>
 	  </div>
 		<br>
         <br>
         <br>
 
         <div class="container">
+          <label> Start Date</label>
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
 
+        <label> End Date </label>
         <input name="endDate" id="txtenddate" type="date" class="datepicker"/>
         </div>
 		<br>

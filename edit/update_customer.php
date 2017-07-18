@@ -29,29 +29,30 @@
 
 <?php
 // Enable error logging:
-error_reporting(E_ALL ^ E_NOTICE);
+	error_reporting(E_ALL ^ E_NOTICE);
 // mysqli connection via user-defined function
-include('./my_connect1.php');
-$mysqli = get_mysqli_conn();
+	include('./my_connect1.php');
+	$mysqli = get_mysqli_conn();
 // SQL statement
-$sql = "UPDATE Customer a "
-. "SET a.address = ?, "
-. " a.email = ?, "
-. " a.credit_rating = ? "
-. "WHERE a.customer_id = ? ";
+	$sql = "UPDATE Customer a "
+		. "SET a.address = ?, "
+			. " a.email = ?, "
+				. " a.credit_rating = ? "
+					. "WHERE a.customer_id = ? ";
 
 // Prepared statement, stage 1: prepare
-$stmt = $mysqli->prepare($sql);
+	$stmt = $mysqli->prepare($sql);
 
 // (2) Handle GET parameters; aid is the name of the hidden textbox in the previous page
-$customer_id = $_GET[customer_id];
 
-$address = $_GET[address];
-$email = $_GET[email];
-$credit_rating = $_GET[credit_rating];
+	$customer_id = $_GET[customer_id];
+	$address = $_GET[address];
+	$email = $_GET[email];
+	$credit_rating = $_GET[credit_rating];
 
 
 // (3) "i" for integer, "d" for double, "s" for string, "b" for blob
+
 $stmt->bind_param('ssii',$address,$email,$credit_rating, $customer_id);
 
 
@@ -61,32 +62,33 @@ $stmt->bind_param('ssii',$address,$email,$credit_rating, $customer_id);
 
 if ($stmt->execute())
 {
-echo '<h1 style="text-align:center">Success!</h1>';
-echo '<p style="text-align:center">The address has been updated
-to ' . $address . ' <br> the email address has been updated to
-' .$email . ' <br> the credit score rating has been updated to ' .$credit_rating . '</p><br>';
+	echo '<h1 style="text-align:center">Success!</h1>';
+	echo '<p style="text-align:center">The address has been updated
+	to ' . $address . ' <br> the email address has been updated to
+	' .$email . ' <br> the credit score rating has been updated to ' .$credit_rating . '</p><br>';
 }
 else
 {
-echo '<h1>You Failed</h1>';
-echo 'Execute failed: (' . $stmt->errno . ') ' . $stmt->error;
+	echo '<h1>You Failed</h1>';
+	echo 'Execute failed: (' . $stmt->errno . ') ' . $stmt->error;
 }
-$stmt->close();
-$mysqli->close();
+	$stmt->close();
+	$mysqli->close();
 ?>
 
+<!-- Home button -->
 <form action="../welcome.php" style="text-align:center">
   <button style="height:30px;width:130px"  class="btn waves-effect waves-light darkred" type="submit" > Home
-
-          </button>
+	</button>
 </form>
+
 <!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="../js/materialize.min.js"></script>
 		<script type="text/javascript">
 
-	 $(document).ready(function() {
-	$('select').material_select();});
+	 	$(document).ready(function() {
+		$('select').material_select();});
 </script>
 </body>
 </html>

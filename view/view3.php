@@ -41,7 +41,7 @@
 
 	<div class="container">
 		<select name="numPromo">
-		  <option value="" disabled selected>Choose your option</option>
+		  <option value="" disabled selected>Number of Promotions</option>
 		  <option value="0">Zero</option>
 		  <option value="1">One</option>
 		  <option value="2">Two</option>
@@ -59,8 +59,9 @@
         <br>
 
         <div class="container">
+            <label> Start Date</label>
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
-
+          <label> End Date</label>
         <input name="endDate" id="txtenddate" type="date" class="datepicker"/>
         </div>
 		<br>

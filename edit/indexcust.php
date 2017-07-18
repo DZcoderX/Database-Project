@@ -27,69 +27,73 @@
 
 	<!-- ============ End of the Nav Bar=============-->
 
-	<!-- <header>
-		<form action="../welcome.php" style="text-align:left">
-			<button style="height:30px;width:130px"  class="btn waves-effect waves-light" type="submit" > Home
-
-							</button>
-		</form>
-	</header> -->
+<!-- title  -->
 <h4 style="text-align:center">Update Customer</h4>
 <br><br>
 <form action="viewHandleCust.php" method="get">
 
 <?php
 
+
 // Enable error logging:
-error_reporting(E_ALL ^ E_NOTICE);
+	error_reporting(E_ALL ^ E_NOTICE);
 // mysqli connection via user-defined function
-include ('./my_connect1.php');
-$mysqli = get_mysqli_conn();
+	include ('./my_connect1.php');
+	$mysqli = get_mysqli_conn();
 ?>
+
 <div class="container">
 
 <?php
 // SQL statement
-$sql = "SELECT a.customer_id "
-	. "FROM Customer a";
+	$sql = "SELECT a.customer_id "
+		. "FROM Customer a";
 
 // Prepared statement, stage 1: prepare
-$stmt = $mysqli->prepare($sql);
+	$stmt = $mysqli->prepare($sql);
 
 // Prepared statement, stage 2: execute
-$stmt->execute();
+	$stmt->execute();
 
 // Bind result variables
-$stmt->bind_result($customer_id);
+	$stmt->bind_result($customer_id);
 
 
 /* fetch values */
-echo '<label for="customer_id">Select the Customer you would like to update information for: </label>';
-echo '<select name="customer_id">';
-while ($stmt->fetch())
-{
-printf ('<option value="%d">%s</option>', $customer_id, $customer_id);
-}
-echo '</select><br>';
+	echo '<label for="customer_id">Select the Customer you would like to update information for: </label>';
+	echo '<select name="customer_id">';
+	while ($stmt->fetch())
+	{
+			printf ('<option value="%d">%s</option>', $customer_id, $customer_id);
+	}
+	echo '</select><br>';
 
 /* close statement and connection*/
-$stmt->close();
-$mysqli->close();
-?>
 
-<br>
-<button style="height:50px;width:200px;text-align:center"  class="btn waves-effect waves-light darkred" type="submit" >Continue
-            <i class="material-icons right">send</i>
-        </button>
-</form>
-</form>
+	$stmt->close();
+	$mysqli->close();
+	?>
+
+<!-- Continue button -->
+
+	<br>
+	<button style="height:50px;width:200px;text-align:center"  class="btn waves-effect waves-light darkred" type="submit" >Continue
+    <i class="material-icons right">send</i>
+  </button>
+	</form>
+	</form>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="../js/materialize.min.js"></script>
-		<script type="text/javascript">
 
-	 $(document).ready(function() {
-	$('select').material_select();});
-</script>
+<!-- For front end  -->
+<!--Import jQuery before materialize.js-->
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script type="text/javascript" src="../js/materialize.min.js"></script>
+			<script type="text/javascript">
+
+	 	 $(document).ready(function() {
+		 $('select').material_select();});
+	</script>
+
 </body>
 </html>

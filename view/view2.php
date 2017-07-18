@@ -58,8 +58,9 @@
         <br>
 
         <div class="container">
+            <label> Start Date</label>
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
-
+        <label> End Date</label>
         <input name="endDate" id="txtenddate" type="date" class="datepicker"/>
         </div>
 		<br>

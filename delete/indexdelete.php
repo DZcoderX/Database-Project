@@ -24,13 +24,10 @@
 		   </nav>
 
 		 <!-- <header>
-			<form action="../welcome.php" style="text-align:left">
-				<button style="height:30px;width:130px"  class="btn waves-effect waves-light" type="submit" > Home
 
-								</button>
-			</form>
+
 		</header> -->
-	 <h4 style="text-align:center">Delete Promotion</h4>
+<h4 style="text-align:center">Delete Promotion</h4>
 <form action="deleteHandlePromotion.php" method="get">
 
 <?php
@@ -77,7 +74,7 @@ $mysqli->close();
 <br>
 <button style="height:50px;width:200px"  class="btn waves-effect waves-light darkred" type="submit" >Continue
             <i class="material-icons right">send</i>
-        </button>
+</button>
 
 </form>
 </div>
@@ -86,7 +83,7 @@ $mysqli->close();
 		<script type="text/javascript" src="../js/materialize.min.js"></script>
 		<script type="text/javascript">
 
-	 $(document).ready(function() {
+	$(document).ready(function() {
 	$('select').material_select();});
 </script>
 </body>

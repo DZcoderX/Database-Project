@@ -27,13 +27,7 @@ indexdelete.php<!DOCTYPE html>
 
 		 <!-- ============ End of the Nav Bar=============-->
 
-		 <!-- <header>
-			 <form action="../welcome.php" style="text-align:left">
-			   <button style="height:30px;width:130px"  class="btn waves-effect waves-light" type="submit" > Home
 
-			           </button>
-			 </form>
-		 </header> -->
 <h1 style="text-align:center">Update Customer Information</h1>
 <br>
 
@@ -70,17 +64,20 @@ $stmt->bind_result($customer_id, $address, $email, $credit_rating, $f_name);
 
 if ($stmt->fetch())
 {
+	//  address update
 echo '<p><input type="hidden" name="customer_id" value="' . $customer_id . '"/></p>';
 echo '<p><label for="address"> ' . $f_name . 's address is '.$address.'.
 <br> Enter the new address you would like to update to: </label></p>';
 echo '<input type="text" name="address" value="'.$address.'"/><br>';
 
+	// email update
 echo '<br><br><input type="hidden" name="customer_id" value="' . $customer_id . '"/>';
 echo '<p><label for="email">The email address is currently set to '.$email.'.
 <br> Enter the new email address you would like to update
   to: </label></p>';
 echo '<input type="text" name="email" value="'.$email.'"/><br>';
 
+	// credit rating update
 echo '<br><br><input type="hidden" name="customer_id" value="' . $customer_id . '"/>';
 echo '<p><label for="credit_rating"> The most up to date credit score rating is '.$credit_rating.'.
 <br> Enter the new credit score if it has been changed: </label><p>';
@@ -89,7 +86,7 @@ echo '<input type="text" name="credit_rating" value="'.$credit_rating.'"/><br>';
 
 else
 {
-echo '<label for="address">Record not found</label>';
+	echo '<label for="address">Record not found</label>';
 }
 /* close statement and connection*/
 $stmt->close();

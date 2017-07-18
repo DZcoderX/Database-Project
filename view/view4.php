@@ -36,10 +36,12 @@
 
 
 	<form method="get" action="./viewHandle4.php" class="col s12">
-
+<br>
+<br>
+<br>
 	<div class="container">
 		<select name="brandName">
-		 
+		 <option value="" disabled selected>Brand Name</option>
 		  <option value="Dole">Dole</option>
 		  <option value="Del Monte">Del Monte
 </option>
@@ -77,7 +79,7 @@
 		  <option value="Chapmans">Chapmans</option>
 		  <option value="Quaker">Quaker</option>
 		  <option value="Kellogg's">Kellogg's</option>
-		 
+
 		</select>
 		<label>Materialize Select</label>
 	  </div>
@@ -85,7 +87,7 @@
         <br>
         <br>
 
-       
+
 
 		<div class="container">
 <!--

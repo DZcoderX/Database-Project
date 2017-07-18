@@ -30,12 +30,7 @@
 
 <!-- ============ End of the Nav Bar=============-->
 
-<br>
-<br>
-<br>
-<br>
-<br>
-        <div class="container row center">
+        <div style="margin-top: 50px; font-size:40px"class="container row center">
 
 <?php
 					// Enable error logging:
@@ -44,10 +39,10 @@
 						include ('./my_connect1.php');
 
 						$mysqli = get_mysqli_conn();
+            // $mysqli = get_mysqli_conn();
 
 
-
-                        $customer_ID = $_GET['customer_id'];
+             $customer_ID = $_GET['customer_id'];
 					   $first_Name = $_GET['f_name'];
 					   $last_name = $_GET['l_name'];
 					   $email = $_GET['email'];
@@ -55,6 +50,7 @@
 						 $Gender = $_GET['gender'];
 						 $Address = $_GET['address'];
 						 $Birthday = $_GET['b_day'];
+             $member = $_GET['member'];
 //					   $customer_ID = $_GET['customer_ID'];
 //					   $first_Name = $_GET['first_Name'];
 //					   $last_name = $_GET['last_name'];
@@ -69,6 +65,33 @@
 					. "(customer_id,f_name,l_name,gender,b_day,address,email,credit_rating)"
 					. "VALUES(?,?,?,?,?,?,?,?)";
 
+
+
+          if($member != null){
+
+            $sql2 = "INSERT INTO Member "
+  					. "(customer_id)"
+  					. "VALUES(?)";
+            $stmt2 = $mysqli->prepare($sql2);
+            $stmt2->bind_param("i", $customer_ID);
+            if ($stmt2->execute()){
+  						echo"success";
+  					}else {
+  						echo"error";
+  					}
+
+          } else {
+            $sql2 = "INSERT INTO Non_Member "
+  					. "(customer_id)"
+  					. "VALUES(?)";
+            $stmt2 = $mysqli->prepare($sql2);
+            $stmt2->bind_param("i", $customer_ID);
+            if ($stmt2->execute()){
+  						echo"success";
+  					}else {
+  						echo"error";
+  					}
+          }
 
 					$stmt = $mysqli->prepare($sql);
 

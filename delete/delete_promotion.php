@@ -38,11 +38,6 @@ error_reporting(E_ALL ^ E_NOTICE);
 include('./my_connect1.php');
 $mysqli = get_mysqli_conn();
 // SQL statement
-// $sql = "UPDATE Customer a "
-// . "SET a.address = ?, "
-// . " a.email = ?, "
-// . " a.credit_rating = ? "
-// . "WHERE a.customer_id = ? ";
 $sql = "DELETE FROM Promotion WHERE promo_id= ?";
 
 
@@ -51,41 +46,42 @@ $stmt = $mysqli->prepare($sql);
 
 // (2) Handle GET parameters; aid is the name of the hidden textbox in the previous page
 $promo_id = $_GET[promo_id];
-//$address = $_GET[address];
-//$email = $_GET[email];
-//$credit_rating = $_GET[credit_rating];
-
 
 // (3) "i" for integer, "d" for double, "s" for string, "b" for blob
 $stmt->bind_param('i',$promo_id);
-
-
 
 
 // $stmt->execute() function returns boolean indicating success
 
 if ($stmt->execute())
 {
-echo '<h1 style="text-align:center">Success!</h1>';
-echo '<p style="text-align:center">The promotion has been deleted</p>';
-echo $promo_id;
+  echo '<h1 style="text-align:center">Success!</h1>';
+  echo '<p style="text-align:center">The promotion has been deleted</p>';
+  echo $promo_id;
 }
+
 else
 {
-echo '<h1>You Failed</h1>';
-echo 'Execute failed: (' . $stmt->errno . ') ' . $stmt->error;
+  echo '<h1>You Failed</h1>';
+  echo 'Execute failed: (' . $stmt->errno . ') ' . $stmt->error;
 }
 $stmt->close();
 $mysqli->close();
 ?>
+
+<!--Import jQuery before materialize.js-->
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
 
 </body>
-<br>
-<form action="../welcome.php" style="text-align:center">
-  <button style="height:30px;width:130px"  class="btn waves-effect waves-light darkred" type="submit" > Home
 
-          </button>
+<br>
+
+<form action="../welcome.php" style="text-align:center">
+
+  <button style="height:30px;width:130px"  class="btn waves-effect waves-light darkred" type="submit" > Home
+  </button>
+
 </form>
 </html>

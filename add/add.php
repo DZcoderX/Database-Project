@@ -101,7 +101,15 @@ include ('./addHandle.php');
                 </select>
                 <label>Gender</label>
             </div>
-
+            <div class="input-field col s6">
+                <select name="member">
+                  <option value="" disabled selected>Member or Non-Member</option>
+                  <option value="">Non-Member</option>
+                  <option value="Female">Member</option>
+                  <!-- <option value="Other">Other</option> -->
+                </select>
+                <label>Gender</label>
+            </div>
 
          </div>
          <div class="row">
