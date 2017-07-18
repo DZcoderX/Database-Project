@@ -74,7 +74,7 @@
             </div>
 -->
 
-			<button class="btn waves-effect waves-light" type="submit" >Submit
+			<button class="btn waves-effect waves-light darkred" type="submit" >Submit
             <i class="material-icons right">send</i>
         </button>
 
