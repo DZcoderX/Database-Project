@@ -15,14 +15,10 @@
     </head>
 
     <body>
-		
+		<!--This is the carousel -->
 		<div class="carousel carousel-slider center" data-indicators="true">
 		
-<!--
-		<div class="carousel-fixed-item center">
-		  <a class="btn waves-effect white grey-text darken-text-2">button</a>
-		</div>
--->
+
 		
 		<div class="carousel-item red white-text" href="#one!">
 		  <h2>Find 1</h2>
@@ -57,28 +53,9 @@
             
 		</div>
 	  </div>
+        
+<!--        End of carousel-->
 		
-<!--
-		<form class="col s12 m6 offset-m3" >
-		
-		<div class="input-field col s12">
-		
-		
-		
-		</div>
-		
-		
-		  <div class="input-field col s12">
-		  <a class="waves-effect waves-light btn-large" href="./view2.php"><i class="material-icons left">cloud</i>button</a>
-		  </div>
-		
-		<div class="input-field col s12">
-		  <a class="waves-effect waves-light btn-large" href="./view3.php"><i class="material-icons left" >cloud</i>button</a>
-			</div>
-		</form>
--->
-		
-	
 	
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

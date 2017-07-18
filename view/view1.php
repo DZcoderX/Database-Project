@@ -32,6 +32,7 @@
 
 <!-- ============ End of the Nav Bar=============-->
 
+<!--        This is the form -->
 
 	<form method="get" action="./viewHandle.php" class="col s12">
 <br>
@@ -63,12 +64,7 @@
 		<br>
 
 		<div class="container">
-<!--
-			<div class="input-field col s4">
-              <input id="custID" name="custID" type="text" class="validate">
-              <label for="custID">CustomerID</label>
-            </div>
--->
+
 
 			<button class="btn waves-effect waves-light darkred" type="submit" >Submit
             <i class="material-icons right">send</i>
@@ -78,6 +74,8 @@
 
 
 		</form>
+        <!--        End of the form -->
+
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

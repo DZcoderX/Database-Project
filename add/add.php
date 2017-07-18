@@ -46,12 +46,7 @@ include ('./addHandle.php');
           <div class="collapsible-body">
 <!--Customer Entity-->
 
-              <!--  Database connection-->
-
-
-
-
-                <!--    End of Database Connection          -->
+             
      <div class="row">
         <form class="col s12" method="get" action="./addHandle.php" >
 
@@ -85,13 +80,7 @@ include ('./addHandle.php');
 
           </div>
           <div class="row">
-<!--
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
-            </div>
--->
+
             <div class="input-field col s6">
                 <select name="gender">
                   <option value="" disabled selected>Select your Gender</option>
@@ -106,7 +95,7 @@ include ('./addHandle.php');
                   <option value="" disabled selected>Member or Non-Member</option>
                   <option value="">Non-Member</option>
                   <option value="Female">Member</option>
-                  <!-- <option value="Other">Other</option> -->
+                  
                 </select>
                 <label>Gender</label>
             </div>
@@ -126,40 +115,7 @@ include ('./addHandle.php');
 
 
         </div>
-<!--            This section is for member/non-member-->
-<!--
-            <div class="row">
-                <div class="input-field col s6">
-                    <select onChange="changetextbox();" id="MemIDS" name="MemIDS">
-                      <option value="" disabled selected>(Non)Member</option>
-                      <option value="1">Member</option>
-                      <option value="2">Non Member</option>
-                    </select>
-                    <label>(Non)Member</label>
 
-
-            </div>
-                <div class="input-field col s6">
-
-                  <input type="text" class="validate"  id="MemID" name="MemID"  />
-                  <label for="Members">Member ID</label>
-                </div>
--->
-                    <!--
-            <script type="text/javascript">
-                function changetextbox()
-                {
-                    if (document.getElementById("MemIDS").value === "1") {
-                        document.getElementById("MemID").disable='false';
-                    } else {
-                        document.getElementById("MemID").disable='true';
-                    }
-                }
-            </script>
-                        -->
-
-<!--            </div>-->
-                <!-- ===============end of member/nonmember-->
 
             <div class="input-field col s2">
 
