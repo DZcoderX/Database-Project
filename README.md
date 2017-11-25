@@ -22,7 +22,8 @@ to take into account when generating synthetic data. Most of the data was genera
 _mockaroo_ (https://www.mockaroo.com)
 ![Image](https://i.imgur.com/3fY0gPE.png_)
 
-<br />
+
+
 **Queries**
 
 * Finding total sales from customers with X dependents will allow a company to analyze their demographic. For example, a company will be able to identify if their demographic is heavily family based and will be able to coordinate their marketing strategy in that respect.
@@ -35,7 +36,8 @@ _mockaroo_ (https://www.mockaroo.com)
 
 ![Image](https://i.imgur.com/gbSIpD2.png)
 
-<br /> 
+
+
 **Interface**
 
 ![Image](https://i.imgur.com/4ahiP5K.png)
