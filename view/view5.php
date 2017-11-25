@@ -33,35 +33,34 @@
 
 
 <!-- ============ End of the Nav Bar=============-->
-        <br>
-        <br>
-        <br>
-        <div class="sizing">
-	<form method="get" action="./viewHandle3.php" class="col s12">
+	<form method="get" action="./viewHandle5.php" class="col s12">
 
+<!--
 	<div class="container">
-		<select name="numPromo">
-		  <option value="" disabled selected>Number of Promotions</option>
-		  <option value="0">Zero</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-            <option value="4">Four</option>
-
-
+		<select name="storeName">
+		  <option value="" disabled selected>Choose your option</option>
+		  <option value="Loblaw">Loblaw</option>
+		  <option value="Zehrs">Zehrs</option>
+		  <option value="No Frills">No Frills</option>
+            <option value="Value-mart">Value-mart</option>
+            <option value="President's Choice Financial">President's Choice Financial</option>
+            <option value="Arz Bakery">Arz Bakery</option>
+            <option value="Wholesale Club">Wholesale Club</option>
+            <option value="Fortinos">Fortinos</option>
+            <option value="T&T Supermarket">T&T Supermarket</option>
+            <option value="Atlantic Superstore">Atlantic Superstore</option>
 		</select>
-		<label>Number of Promotions</label>
+		<label>Stores</label>
 	  </div>
-
-
+-->
 		<br>
         <br>
         <br>
-
+<p style="margin-left:15%"> Enter the time interval for the sales of Atlantic Superstore</p>
         <div class="container">
             <label> Start Date</label>
         <input name="startDate" id="txtstartdate" type="date" class="datepicker" />
-          <label> End Date</label>
+        <label> End Date</label>
         <input name="endDate" id="txtenddate" type="date" class="datepicker"/>
         </div>
 		<br>
@@ -83,7 +82,6 @@
 
 
 		</form>
-            </div>
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

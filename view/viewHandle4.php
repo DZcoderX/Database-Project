@@ -29,7 +29,7 @@
         <li><a href="../add/add.php">Add</a></li>
       <li><a href="../edit/indexcust.php">Edit</a></li>
       <li><a href="../delete/indexdelete.php">Delete</a></li>
-      <li><a href="../view/view.php">View</a></li>
+      <li><a href="../view/viewdemo.php">View</a></li>
       </ul>
     </div>
   </nav>
@@ -72,18 +72,18 @@
 //                        $sDate = $_GET['startDate'];
 //                        $eDate = $_GET['endDate'];
                         $brandName = $_GET['brandName'];
-                
-                
+
+
 
 
                 $stmt->bind_param('s', $brandName);
 //          echo $sql;
                 $stmt->execute();
                 $stmt->bind_result($promoID, $promoRebate, $promoItemID, $itemName, $total);
-                
-                
 
-                echo $promoID . $promoRebate, $promoItemID . $itemName . $total;
+
+
+                // echo $promoID . $promoRebate, $promoItemID . $itemName . $total;
 
                     while($stmt->fetch()){
                         printf ('<tr><td>%s</td>', $promoID);

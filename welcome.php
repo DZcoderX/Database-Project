@@ -20,10 +20,10 @@
 
   <nav role="navigation" class="darkred">
     <div class="nav-wrapper container">
-      <a href="./welcome.php" class="brand-logo">Welcome Danial Betres</a>
+      <a href="./welcome.php" class="brand-logo">Welcome Galen Weston</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
 
-      <li><a href="../view/view.php"></a>Grocertrack</li>
+      <li><a href="../view/viewdemo.php"></a>Grocertrack</li>
       </ul>
     </div>
   </nav>
@@ -93,11 +93,18 @@
 
 
 			<div class="carousel">
-			<a class="carousel-item" href="#one!"><img style='border:3px solid #000000' src="https://i.imgur.com/UrUL7zj.png"></a>
+        <form action="./view/view2.php" method="get">
+			<a class="carousel-item" href="./view/view5.php"><img  style='border:3px solid #000000' src="https://i.imgur.com/UrUL7zj.png"></a>
+    </form>
 			<a class="carousel-item" href="#two!"><img style='border:3px solid #000000' src="https://i.imgur.com/V0SIb1a.png"></a>
 			<a class="carousel-item" href="#three!"><img style='border:3px solid #000000' src="https://i.imgur.com/pIQDcmS.png"></a>
 			<a class="carousel-item" href="#four!"><img style='border:3px solid #000000' src="https://i.imgur.com/L9ZYuYC.jpg"></a>
-			<a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/9lMhEpL.png"></a><a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/I2uf3Z5.jpg"></a><a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/vkPJuZn.png"></a><a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/Sew3dIH.png"></a><a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/DX5odbw.jpg"></a><a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/KlY2kK0.jpg"></a>
+			<a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/9lMhEpL.png"></a>
+      <a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/I2uf3Z5.jpg"></a>
+      <a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/vkPJuZn.png"></a>
+      <a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/Sew3dIH.png"></a>
+      <a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/DX5odbw.jpg"></a>
+      <a class="carousel-item" href="#five!"><img style='border:3px solid #000000' src="https://i.imgur.com/KlY2kK0.jpg"></a>
 		  </div>
 
 
@@ -112,15 +119,15 @@
   <footer class="page-footer darkred">
     <div class="container">
       <div class="row">
-        
+
           <h5 class="white-text">Company Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
-       
-        
 
-    
+
+
+
       </div>
     </div>
     <div class="footer-copyright">

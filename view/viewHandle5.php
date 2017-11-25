@@ -10,7 +10,8 @@
        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
 
        <link type="text/css" rel="stylesheet" href="../css/styleWelcome.css"  media="screen,projection"/>
-      <style>
+
+       <style>
          div {
             width : 200px;
             height : 200px;
@@ -22,8 +23,9 @@
 
 <body>
 <!-- =============This is the nav bar===========-->
-<nav role="navigation" class="darkred">
-    <div class="nav-wrapper container">
+
+    <nav role="navigation" class="darkred">
+    <div class="nav-wrapper container darkred">
       <a href="../welcome.php" class="brand-logo">Home</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down right">
         <li><a href="../add/add.php">Add</a></li>
@@ -42,10 +44,7 @@
         <h3 style="text-align:center;">Data Analysis</h3>
       <table class="striped bordered centered">
       <thead>
-        <tr><th style="text-align:center;">Number of Dependents</th>
-          <th style="text-align:center;">Start Date</th>
-          <th style="text-align:center;">End Date </th>
-         <th style="text-align:center;">Total Sales</th></tr>
+         <tr><th style="text-align:center;">Store ID</th><th style="text-align:center;">Store Name</th><th style="text-align:center;">Total</th></tr>
       </thead>
       <tbody>
 <?php
@@ -59,33 +58,25 @@
 
 						$mysqli = get_mysqli_conn();
 
-						$sql = "SELECT Sum(T.sub_total) FROM Transactions T JOIN Customer "
-                        . "ON cust_id=customer_id where "
-                        . "(SELECT Count(*) "
-                        . "FROM Dependent "
-                        . "WHERE Dependent.customer_id = Customer.customer_id) = ? "
-                        . "AND T.trans_date BETWEEN ? AND ? ";
-
+						$sql = "SELECT T.store_id, S.store_name, Sum(T.sub_total)"
+                        . "FROM (Transactions AS T JOIN Stores AS S ON T.store_id = S.store_id)"
+                        . "WHERE T.trans_date >= ? AND T.trans_date <= ? AND T.store_id=10 "
+                        . "GROUP BY T.store_id";
 
 					$stmt = $mysqli->prepare($sql);
 
                         $sDate = $_GET['startDate'];
                         $eDate = $_GET['endDate'];
-                        $num = $_GET['number'];
 
-//                    echo $sDate . $eDate . $num;
-					$stmt->bind_param('iss', $num, $sDate, $eDate);
-//                    echo $stmt;
+					$stmt->bind_param('ss', $sDate, $eDate);
 					$stmt->execute();
-					$stmt->bind_result($total);
-
+					$stmt->bind_result($storeID,$storeName,$total);
 
 
                     while($stmt->fetch()){
-                      printf('<tr><td>%s</td>',$num);
-                      printf('<td>%s</td>',$sDate);
-                      printf('<td>%s</td>',$eDate);
-                      printf('<td>%s</td></tr>',$total);
+                        printf ('<tr><td>%s</td>', $storeID);
+                        printf ('<td>%s</td>',$storeName);
+                        printf('<td>%s</td></tr>',$total);
                     }
 
 					$stmt->close();

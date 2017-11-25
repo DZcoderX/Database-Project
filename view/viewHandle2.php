@@ -31,7 +31,7 @@
         <li><a href="../add/add.php">Add</a></li>
       <li><a href="../edit/indexcust.php">Edit</a></li>
       <li><a href="../delete/indexdelete.php">Delete</a></li>
-      <li><a href="../view/view.php">View</a></li>
+      <li><a href="../view/viewdemo.php">View</a></li>
       </ul>
     </div>
   </nav>
@@ -44,7 +44,11 @@
         <h3 style="text-align:center;">Data Analysis</h3>
       <table class="striped bordered centered">
       <thead>
-         <tr><th style="text-align:center;">Store ID</th><th style="text-align:center;">Store Name</th><th style="text-align:center;">Total</th></tr>
+         <tr><th style="text-align:center;">Store ID</th>
+           <th style="text-align:center;">Store Name</th>
+           <th style="text-align:center;">Start Date</th>
+           <th style="text-align:center;">End Date </th>
+           <th style="text-align:center;">Total</th></tr>
       </thead>
       <tbody>
 <?php
@@ -76,6 +80,8 @@
                     while($stmt->fetch()){
                         printf ('<tr><td>%s</td>', $storeID);
                         printf ('<td>%s</td>',$storeName);
+                        printf('<td>%s</td>',$sDate);
+                        printf('<td>%s</td>',$eDate);
                         printf('<td>%s</td></tr>',$total);
                     }
 

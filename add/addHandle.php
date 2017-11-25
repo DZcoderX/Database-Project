@@ -22,7 +22,7 @@
         <li><a href="../add/add.php">Add</a></li>
       <li><a href="../edit/indexcust.php">Edit</a></li>
       <li><a href="../delete/indexdelete.php">Delete</a></li>
-      <li><a href="../view/view.php">View</a></li>
+      <li><a href="../view/viewdemo.php">View</a></li>
       </ul>
     </div>
   </nav>
@@ -39,8 +39,9 @@
 						include ('./my_connect1.php');
 
 						$mysqli = get_mysqli_conn();
+            // $mysqli = get_mysqli_conn();
 
-// (2) Handle GET parameters
+
              $customer_ID = $_GET['customer_id'];
 					   $first_Name = $_GET['f_name'];
 					   $last_name = $_GET['l_name'];
@@ -50,10 +51,15 @@
 						 $Address = $_GET['address'];
 						 $Birthday = $_GET['b_day'];
              $member = $_GET['member'];
+//					   $customer_ID = $_GET['customer_ID'];
+//					   $first_Name = $_GET['first_Name'];
+//					   $last_name = $_GET['last_name'];
+//					   $email = $_GET['email'];
+//					   $credit_Score = $_GET['credit_Score'];
 
 
 
-//sql statement
+
 
 					$sql = "INSERT INTO Customer "
 					. "(customer_id,f_name,l_name,gender,b_day,address,email,credit_rating)"
@@ -66,15 +72,12 @@
             $sql2 = "INSERT INTO Member "
   					. "(customer_id)"
   					. "VALUES(?)";
-              // Prepared statement, stage 1: prepare
-
             $stmt2 = $mysqli->prepare($sql2);
             $stmt2->bind_param("i", $customer_ID);
-              // $stmt->execute() function returns boolean indicating success
             if ($stmt2->execute()){
-  						echo"success";
+  						echo "";
   					}else {
-  						echo"error";
+  						echo"";
   					}
 
           } else {
@@ -84,9 +87,9 @@
             $stmt2 = $mysqli->prepare($sql2);
             $stmt2->bind_param("i", $customer_ID);
             if ($stmt2->execute()){
-  						echo"success";
+  						echo"";
   					}else {
-  						echo"error";
+  						echo"";
   					}
           }
 

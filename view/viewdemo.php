@@ -24,7 +24,7 @@
 
 		<div class="carousel-item red white-text" href="#one!">
 		  <h1>Find 1</h1>
-		  <p class="white-text">Find the total sales from customers with 0 or more dependent
+		  <p class="white-text">Find the total sales from customers with X dependent(s)
           within a time period.</p>
 
             <a class="waves-effect waves-light btn-large darkred"  href="./view1.php"><i class="material-icons left">cloud</i>Find</a>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="carousel-item orange white-text" href="#three!">
 		  <h1>Find 3</h1>
-		  <p class="white-text">Find all items that have X number of promotions in a time.</p>
+		  <p class="white-text">Find all items that have X number of promotions in a given time.</p>
 
 		  <a class="waves-effect waves-light btn-large darkred" href="./view3.php"><i class="material-icons left" >cloud</i>Find</a>
 
@@ -48,7 +48,7 @@
 
             <div class="carousel-item pink white-text" href="#three!">
 		  <h1>Find 4</h1>
-		  <p class="white-text">Find all the promotions offered by a specific brand and give the total rebate amount given back.</p>
+		  <p class="white-text">Find all the promotions offered by a specific brand and return the total rebate amount given back to customers.</p>
 
 		  <a class="waves-effect waves-light btn-large darkred" href="./view4.php"><i class="material-icons left" >cloud</i>Find</a>
 
