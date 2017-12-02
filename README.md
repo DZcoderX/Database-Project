@@ -2,22 +2,24 @@
 
    ![Image](https://i.imgur.com/YJXz3Bv.png)
 
-###Mission:
+## Mission:
+
 _grocertrack_ helps food retail companies increase efficiency within their 
 operations through supplying a secure and seamless data storage and manipulation system.
 
-###Product: 
+## Product: 
+
 _grocertrack_ provides access to a data storage and manipulation system, 
 available for licensing to food retail companies who are seeking a simplistic way to collect, store, 
 and analyze data from their business. Partnered businesses are able to view, modify, add, and delete data 
 through a customized webpage catered to the companies needs. The implementation of _grocertrack_ will be an 
 extensive cost-minimization tool as it increases efficiency within the business. 
 
-###Target Market
+## Target Market
 _grocertrack_ is targeted to any small or large scale food retailers across the United States and 
 Canada who are looking for an innovative way to improve their business and differentiate themselves from their competition.
 
-###Description of Data
+## Description of Data
 In order to to determine and prove the efficacy of _grocertrack_, it was of high importance that the data used 
 was as realistic as possible. Due to the incredible scale and size of the grocery industry, there were many variables 
 to take into account when generating synthetic data. Most of the data was generated using a realistic data generator 
@@ -26,7 +28,7 @@ _mockaroo_ (https://www.mockaroo.com)
 
 
 
-###Queries
+## Queries
 
 * Finding total sales from customers with X dependents will allow a company to analyze their demographic. For example, a company will be able to identify if their demographic is heavily family based and will be able to coordinate their marketing strategy in that respect.
 
@@ -42,7 +44,7 @@ _mockaroo_ (https://www.mockaroo.com)
 
 
 
-###Interface
+## Interface
 
 ![Image](https://i.imgur.com/4ahiP5K.png)
 
